@@ -1,0 +1,393 @@
+<section id="hero-true-1" style="position: relative; z-index: 1;">
+    <style>
+        .bb-true1 {
+            height: 100vh;
+            min-height: 600px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .bb-true1-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: bbFadeTrue1 25s infinite;
+        }
+        .bb-true1-bg:nth-child(1) { animation-delay: 0s; }
+        .bb-true1-bg:nth-child(2) { animation-delay: 5s; }
+        .bb-true1-bg:nth-child(3) { animation-delay: 10s; }
+        .bb-true1-bg:nth-child(4) { animation-delay: 15s; }
+        .bb-true1-bg:nth-child(5) { animation-delay: 20s; }
+
+        @keyframes bbFadeTrue1 {
+            0%, 16%, 100% { opacity: 0; transform: scale(1.05); }
+            4%, 12% { opacity: 1; transform: scale(1); }
+        }
+        
+        /* The Maroon to Navy Gradient */
+        .bb-true1-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(104, 17, 33, 0.85) 0%, rgba(0, 61, 115, 0.85) 100%);
+            z-index: 2;
+        }
+        
+        .bb-true1-content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            padding: 0 5%;
+        }
+        .bb-true1-eyebrow {
+            color: #f0c560;
+            font-size: clamp(12px, 2vw, 14px);
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            display: block;
+        }
+        .bb-true1 h1 {
+            color: #fff;
+            font-size: clamp(36px, 6vw, 76px);
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+        .bb-true1 p {
+            color: rgba(255,255,255,0.9);
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bb-true1-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+        .bb-btn-gold {
+            background: #f0c560;
+            color: #003d73;
+            padding: 16px 40px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .bb-btn-gold:hover { background: #fff; transform: translateY(-2px); }
+        .bb-btn-outline {
+            border: 1px solid rgba(255,255,255,0.4);
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .bb-btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+        
+        @media(max-width: 768px) {
+            .bb-true1-btns { flex-direction: column; width: 100%; }
+            .bb-btn-gold, .bb-btn-outline { width: 100%; text-align: center; padding: 14px 20px; }
+            .bb-true1-overlay { background: linear-gradient(180deg, rgba(104, 17, 33, 0.7) 0%, rgba(0, 61, 115, 0.95) 100%); }
+        }
+    </style>
+    <div class="bb-true1">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/af2c45e7-73b9-47c6-be54-66053d2ff68b/IMG_0209.JPG" class="bb-true1-bg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/d829181f-165e-4c69-abc6-b7260893aa9b/260A5270.JPG" class="bb-true1-bg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/aedbd0b8-ffb3-4fcf-a53f-4dfceedb7b89/260A5295.JPG" class="bb-true1-bg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/87ebaa78-cfcb-4bd3-b4d2-15e9b81d544c/3A.JPG" class="bb-true1-bg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/65cd9b6b-04c6-47e4-a518-8a7033316d79/6W7A8887.JPG" class="bb-true1-bg" alt="">
+        
+        <div class="bb-true1-overlay"></div>
+        
+        <div class="bb-true1-content">
+            <span class="bb-true1-eyebrow">Bluebells School International</span>
+            <h1>Inspiring Learners.<br>Shaping Leaders.</h1>
+            <p>Preparing students through academic excellence, innovation, global citizenship, and wellbeing.</p>
+            <div class="bb-true1-btns">
+                <a href="/learning" class="bb-btn-gold">Explore Academics</a>
+                <a href="/admissions" class="bb-btn-outline">Book a Visit</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="hero-true-2" style="position: relative; z-index: 1;">
+    <style>
+        .bb-true2 {
+            height: 100vh;
+            min-height: 600px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 8%;
+        }
+        .bb-true2-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: bbFadeTrue2 25s infinite;
+        }
+        .bb-true2-bg:nth-child(1) { animation-delay: 0s; }
+        .bb-true2-bg:nth-child(2) { animation-delay: 5s; }
+        .bb-true2-bg:nth-child(3) { animation-delay: 10s; }
+        .bb-true2-bg:nth-child(4) { animation-delay: 15s; }
+        .bb-true2-bg:nth-child(5) { animation-delay: 20s; }
+
+        @keyframes bbFadeTrue2 {
+            0%, 16%, 100% { opacity: 0; transform: scale(1.05); }
+            4%, 12% { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Bottom-heavy Navy Gradient - No Black */
+        .bb-true2-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top right, rgba(0, 61, 115, 0.95) 0%, rgba(0, 61, 115, 0.5) 40%, transparent 80%);
+            z-index: 2;
+        }
+        
+        .bb-true2-content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+        }
+        .bb-true2-eyebrow {
+            color: #f0c560;
+            font-size: clamp(12px, 1.5vw, 14px);
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .bb-true2-eyebrow::before {
+            content: '';
+            height: 2px;
+            width: 40px;
+            background: #f0c560;
+        }
+        .bb-true2 h1 {
+            color: #fff;
+            font-size: clamp(38px, 6vw, 72px);
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .bb-true2 p {
+            color: rgba(255,255,255,0.9);
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        .bb-true2-link {
+            color: #fff;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #f0c560;
+            padding-bottom: 4px;
+            transition: 0.3s;
+        }
+        .bb-true2-link:hover { gap: 16px; color: #f0c560; }
+        
+        @media(max-width: 768px) {
+            .bb-true2 { align-items: center; justify-content: center; text-align: center; padding: 5%; }
+            .bb-true2-eyebrow { justify-content: center; }
+            .bb-true2-eyebrow::before { display: none; }
+            .bb-true2-overlay { background: linear-gradient(to top, rgba(0, 61, 115, 0.95) 10%, rgba(0, 61, 115, 0.6) 60%, rgba(0, 61, 115, 0.3) 100%); }
+        }
+    </style>
+    <div class="bb-true2">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/af2c45e7-73b9-47c6-be54-66053d2ff68b/IMG_0209.JPG" class="bb-true2-bg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/d829181f-165e-4c69-abc6-b7260893aa9b/260A5270.JPG" class="bb-true2-bg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/aedbd0b8-ffb3-4fcf-a53f-4dfceedb7b89/260A5295.JPG" class="bb-true2-bg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/87ebaa78-cfcb-4bd3-b4d2-15e9b81d544c/3A.JPG" class="bb-true2-bg" alt="">
+        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/65cd9b6b-04c6-47e4-a518-8a7033316d79/6W7A8887.JPG" class="bb-true2-bg" alt="">
+        
+        <div class="bb-true2-overlay"></div>
+        
+        <div class="bb-true2-content">
+            <span class="bb-true2-eyebrow">Bluebells School International</span>
+            <h1>Inspiring Learners.<br>Shaping Leaders.</h1>
+            <p>Preparing students through academic excellence, innovation, global citizenship, and wellbeing.</p>
+            <a href="/learning" class="bb-true2-link">Explore the Curriculum &rarr;</a>
+        </div>
+    </div>
+</section>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+
+<section id="hero-true-3" style="position: relative; z-index: 1;">
+    <style>
+        .bb-true3 {
+            height: 100vh;
+            min-height: 600px;
+            position: relative;
+            background-color: #681121; /* Solid Maroon Base */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3vh 2vw; /* Creates the border effect on desktop */
+        }
+        .bb-true3-canvas {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 8%;
+        }
+        .bb-true3-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: bbFadeTrue3 25s infinite;
+        }
+        .bb-true3-bg:nth-child(1) { animation-delay: 0s; }
+        .bb-true3-bg:nth-child(2) { animation-delay: 5s; }
+        .bb-true3-bg:nth-child(3) { animation-delay: 10s; }
+        .bb-true3-bg:nth-child(4) { animation-delay: 15s; }
+        .bb-true3-bg:nth-child(5) { animation-delay: 20s; }
+
+        @keyframes bbFadeTrue3 {
+            0%, 16%, 100% { opacity: 0; transform: scale(1.03); }
+            4%, 12% { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Navy Sweep Overlay Inside the Canvas */
+        .bb-true3-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(0, 61, 115, 0.95) 0%, rgba(0, 61, 115, 0.5) 50%, transparent 100%);
+            z-index: 2;
+        }
+        
+        .bb-true3-content {
+            position: relative;
+            z-index: 3;
+            max-width: 650px;
+        }
+        .bb-true3-eyebrow {
+            color: #f0c560;
+            font-size: clamp(12px, 1.5vw, 13px);
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .bb-true3 h1 {
+            color: #fff;
+            font-size: clamp(34px, 5.5vw, 70px);
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .bb-true3 p {
+            color: rgba(255,255,255,0.9);
+            font-size: clamp(16px, 2vw, 19px);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+        .bb-true3-btns {
+            display: flex;
+            gap: 16px;
+        }
+        .bb-btn-gold-solid {
+            background: #f0c560;
+            color: #003d73;
+            padding: 16px 36px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .bb-btn-gold-solid:hover { background: #fff; transform: translateY(-2px); }
+        
+        @media(max-width: 768px) {
+            .bb-true3 { padding: 0; } /* Removes the maroon border on mobile for max screen space */
+            .bb-true3-canvas { border-radius: 0; padding: 6%; justify-content: center; text-align: center; }
+            .bb-true3-overlay { background: linear-gradient(to bottom, rgba(0, 61, 115, 0.6) 0%, rgba(0, 61, 115, 0.95) 100%); }
+            .bb-true3-btns { justify-content: center; }
+        }
+    </style>
+    <div class="bb-true3">
+        <div class="bb-true3-canvas">
+            <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/af2c45e7-73b9-47c6-be54-66053d2ff68b/IMG_0209.JPG" class="bb-true3-bg" alt="">
+            <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/d829181f-165e-4c69-abc6-b7260893aa9b/260A5270.JPG" class="bb-true3-bg" alt="">
+            <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/aedbd0b8-ffb3-4fcf-a53f-4dfceedb7b89/260A5295.JPG" class="bb-true3-bg" alt="">
+            <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/87ebaa78-cfcb-4bd3-b4d2-15e9b81d544c/3A.JPG" class="bb-true3-bg" alt="">
+            <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/65cd9b6b-04c6-47e4-a518-8a7033316d79/6W7A8887.JPG" class="bb-true3-bg" alt="">
+            
+            <div class="bb-true3-overlay"></div>
+            
+            <div class="bb-true3-content">
+                <span class="bb-true3-eyebrow">Bluebells School International</span>
+                <h1>Inspiring Learners.<br>Shaping Leaders.</h1>
+                <p>Preparing students through academic excellence, innovation, global citizenship, and wellbeing.</p>
+                <div class="bb-true3-btns">
+                    <a href="/learning" class="bb-btn-gold-solid">Explore Academics</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>

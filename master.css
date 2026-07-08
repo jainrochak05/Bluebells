@@ -1,0 +1,12 @@
+<style>
+    :root {
+        /* The Core Palette */
+        --bb-navy-dark: #03111f;   /* Luxurious deep dark background */
+        --bb-navy-main: #003d73;   /* Primary brand blue */
+        --bb-blue-accent: #2596be; /* Vibrant accent */
+        --bb-gold: #f0c560;        /* Elegant highlight */
+        --bb-light: #fdfaf4;       /* Off-white for light sections */
+        --bb-text-main: #1f2733;   /* Dark text */
+        --bb-text-muted: #5c6c7a;  /* Muted text */
+    }
+</style>

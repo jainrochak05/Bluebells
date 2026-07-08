@@ -1,0 +1,4734 @@
+<style>
+    [id="1"] { position: relative; z-index: 1; height: 100vh; min-height: 560px; }
+    section:not([id="1"]) { position: relative; z-index: 2; }
+</style>
+<section id="1">
+        <style>
+            .bb-hero {
+                height: 100vh;
+                min-height: 560px;
+                overflow: visible;
+                position: relative;
+                z-index: 1;
+                /* font-family: Inter, sans-serif; */
+            }
+
+            .bb-hero * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-hero-background {
+                position: fixed;
+                inset: 0;
+                z-index: 0;
+            }
+
+            .bb-bg {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+                transform: scale(1);
+                transition: opacity 1.2s ease, transform 8s ease;
+            }
+
+            .bb-bg.active {
+                opacity: 1;
+                transform: scale(1.08);
+            }
+
+            .bb-hero-overlay {
+                position: fixed;
+                inset: 0;
+                background: linear-gradient(90deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .35), rgba(0, 0, 0, .15));
+                z-index: 2;
+            }
+
+            .bb-hero-content {
+                position: fixed;
+                left: 8%;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fff;
+                z-index: 3;
+                max-width: 650px;
+            }
+
+            .bb-eyebrow {
+                display: inline-block;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                margin-bottom: 18px;
+                opacity: .85;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .bb-hero h1 {
+                font-size: 72px;
+                line-height: 1.05;
+                margin-bottom: 24px;
+                font-weight: 700;
+                color: #fff;
+                transition: opacity .4s ease;
+            }
+
+            .bb-hero p {
+                font-size: 22px;
+                line-height: 1.7;
+                margin-bottom: 40px;
+                color: #fff;
+                opacity: .95;
+                transition: opacity .4s ease;
+            }
+
+            .bb-hero-buttons {
+                display: flex;
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            .bb-btn {
+                padding: 18px 36px;
+                border-radius: 999px;
+                text-decoration: none;
+                transition: .35s;
+                font-weight: 600;
+                display: inline-block;
+            }
+
+            .bb-primary {
+                background: #004990;
+                color: #fff;
+            }
+
+            .bb-primary:hover {
+                transform: translateY(-4px);
+                background: #00356b;
+            }
+
+            .bb-secondary {
+                border: 2px solid #fff;
+                color: #fff;
+            }
+
+            .bb-secondary:hover {
+                background: #fff;
+                color: #00356b;
+            }
+
+            .bb-hero-scroll {
+                position: absolute;
+                bottom: 90px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #fff;
+                letter-spacing: 4px;
+                font-size: 12px;
+                z-index: 4;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                font-family: inherit;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                opacity: .9;
+                transition: opacity .3s ease, transform .3s ease;
+            }
+
+            .bb-hero-scroll:hover {
+                opacity: 1;
+                transform: translateX(-50%) translateY(4px);
+            }
+
+            .bb-hero-scroll:after {
+                content: "";
+                display: block;
+                width: 2px;
+                height: 40px;
+                background: #fff;
+                margin: 12px auto 0;
+            }
+
+            .bb-hero-dots {
+                position: fixed;
+                bottom: 45px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 10px;
+                z-index: 4;
+            }
+
+            .bb-dot {
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, .4);
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                transition: .3s;
+            }
+
+            .bb-dot.active {
+                background: #fff;
+                transform: scale(1.25);
+            }
+
+            @media(max-width:768px) {
+                .bb-hero-content {
+                    left: 30px;
+                    right: 30px;
+                    max-width: none;
+                }
+
+                .bb-hero h1 {
+                    font-size: 40px;
+                }
+
+                .bb-hero p {
+                    font-size: 17px;
+                    margin-bottom: 32px;
+                }
+
+                .bb-hero-buttons {
+                    flex-direction: column;
+                }
+
+                .bb-btn {
+                    text-align: center;
+                }
+
+                .bb-hero-scroll {
+                    bottom: 78px;
+                }
+
+                .bb-hero-dots {
+                    bottom: 36px;
+                }
+            }
+        </style>
+
+        <section class="bb-hero" id="bb-hero" aria-label="Bluebells School International introduction">
+
+            <div class="bb-hero-overlay"></div>
+
+            <div class="bb-hero-background">
+                <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/af2c45e7-73b9-47c6-be54-66053d2ff68b/IMG_0209.JPG"
+                    class="bb-bg active" alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/d829181f-165e-4c69-abc6-b7260893aa9b/260A5270.JPG"
+                    class="bb-bg" alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/aedbd0b8-ffb3-4fcf-a53f-4dfceedb7b89/260A5295.JPG"
+                    class="bb-bg" alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/87ebaa78-cfcb-4bd3-b4d2-15e9b81d544c/3A.JPG"
+                    class="bb-bg" alt="">
+                <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/65cd9b6b-04c6-47e4-a518-8a7033316d79/6W7A8887.JPG"
+                    class="bb-bg" alt="">
+            </div>
+
+            <div class="bb-hero-content">
+                <span class="bb-eyebrow">Bluebells School International</span>
+                <h1 id="bb-hero-title">Inspiring Learners.<br>Shaping Leaders.</h1>
+                <p id="bb-hero-text">Preparing students through academic excellence, innovation, global citizenship and
+                    wellbeing.</p>
+
+                <div class="bb-hero-buttons">
+                    <a href="/learning" class="bb-btn bb-primary">Explore Learning</a>
+                    <a href="/admissions" class="bb-btn bb-secondary">Book a Visit</a>
+                </div>
+            </div>
+
+            <button class="bb-hero-scroll" id="bb-scroll-btn" aria-label="Scroll to next section">Scroll</button>
+
+            <div class="bb-hero-dots" id="bb-hero-dots"></div>
+
+        </section>
+
+        <script>
+            (function () {
+                const slides = [
+                    { title: "Inspiring Learners.<br>Shaping Leaders.", text: "Preparing students through academic excellence, innovation, global citizenship and wellbeing." },
+                    { title: "Academic Excellence.", text: "Empowering curious minds through world-class education." },
+                    { title: "Future Ready Learning.", text: "AI, Robotics and STEM preparing students for tomorrow." },
+                    { title: "Student Life.", text: "Sport, the arts, leadership and outreach beyond the classroom." },
+                    { title: "Global Learning.", text: "One Planet. One Family. Mankind." },
+                    { title: "Admissions Open.", text: "Begin your Bluebells journey today." }
+                ];
+
+                const heroEl = document.getElementById('bb-hero');
+                const images = heroEl.querySelectorAll('.bb-bg');
+                const title = document.getElementById('bb-hero-title');
+                const text = document.getElementById('bb-hero-text');
+                const dotsWrap = document.getElementById('bb-hero-dots');
+
+                let index = 0;
+                let timer = null;
+                const INTERVAL = 6000;
+
+                // build dots (matched to number of images available)
+                const slideCount = Math.min(slides.length, images.length);
+                for (let i = 0; i < slideCount; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = 'bb-dot' + (i === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                    dot.addEventListener('click', () => goTo(i));
+                    dotsWrap.appendChild(dot);
+                }
+                const dotEls = dotsWrap.querySelectorAll('.bb-dot');
+
+                function render(i) {
+                    images[index].classList.remove('active');
+                    images[i].classList.add('active');
+                    dotEls[index].classList.remove('active');
+                    dotEls[i].classList.add('active');
+
+                    title.style.opacity = 0;
+                    text.style.opacity = 0;
+
+                    setTimeout(() => {
+                        title.innerHTML = slides[i].title;
+                        text.innerHTML = slides[i].text;
+                        title.style.opacity = 1;
+                        text.style.opacity = 1;
+                    }, 400);
+
+                    index = i;
+                }
+
+                function next() {
+                    const i = (index + 1) % slideCount;
+                    render(i);
+                }
+
+                function goTo(i) {
+                    if (i === index) return;
+                    render(i);
+                    restart();
+                }
+
+                function start() {
+                    timer = setInterval(next, INTERVAL);
+                }
+
+                function restart() {
+                    clearInterval(timer);
+                    start();
+                }
+
+                start();
+
+                // pause on hover so visitors can read a slide
+                heroEl.addEventListener('mouseenter', () => clearInterval(timer));
+                heroEl.addEventListener('mouseleave', start);
+
+                // functional scroll button: scrolls to section 2
+                const scrollBtn = document.getElementById('bb-scroll-btn');
+                scrollBtn.addEventListener('click', () => {
+                    const target = document.getElementById('2');
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+                    }
+                });
+            })();
+        </script>
+    </section>
+
+<section id="2">
+        <style>
+            .bb-glance {
+                background: #fdfaf4;
+                padding: 52px 8% 44px;
+                /* font-family: Inter, sans-serif; */
+                color: #1f2733;
+                position: relative;
+                overflow: hidden;
+            }
+            .bb-glance::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(circle, #003d73 1px, transparent 1px);
+                background-size: 30px 30px;
+                opacity: .10;
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            .bb-glance * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-glance-honeycomb {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                overflow: hidden;
+            }
+
+            .bb-glance-honeycomb svg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .bb-glance-head {
+                text-align: center;
+                max-width: 600px;
+                margin: 0 auto 32px;
+                position: relative;
+                z-index: 3;
+            }
+
+            .bb-glance-eyebrow {
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-size: 12.5px;
+                opacity: .85;
+                font-weight: 600;
+                display: block;
+                margin-bottom: 10px;
+                color: #003d73;
+            }
+
+            .bb-glance-head h2 {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #1f2733;
+            }
+
+            .bb-glance-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 16px;
+                max-width: 1180px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 3;
+            }
+
+            .bb-stat {
+                text-align: center;
+                padding: 26px 12px;
+                border-radius: 14px;
+                background: #fff;
+                border: 1px solid #e4e8ee;
+                box-shadow: 0 4px 16px rgba(0,30,70,.06);
+                transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+                opacity: 0;
+                transform: translateY(18px);
+                position: relative;
+                z-index: 1;
+            }
+
+            .bb-stat.bb-in {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .bb-stat:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 32px rgba(0,30,70,.12);
+                border-color: #2596be;
+            }
+
+            .bb-stat-icon {
+                width: 38px;
+                height: 38px;
+                margin: 0 auto 12px;
+                border-radius: 50%;
+                background: rgba(0,61,115,.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .bb-stat-icon svg {
+                width: 18px;
+                height: 18px;
+                stroke: #003d73;
+                fill: none;
+                stroke-width: 1.8;
+            }
+
+            .bb-stat-number {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 6px;
+                font-variant-numeric: tabular-nums;
+                color: #003d73;
+            }
+
+            .bb-stat-number .bb-suffix {
+                font-size: 32px;
+                font-weight: 700;
+                color: #2596be;
+            }
+
+            .bb-stat-label {
+                font-size: 12.5px;
+                opacity: .7;
+                line-height: 1.4;
+                color: #5c6c7a;
+            }
+
+            .bb-glance-footer {
+                text-align: center;
+                margin-top: 30px;
+                position: relative;
+                z-index: 3;
+            }
+
+            .bb-glance-philosophy {
+                font-size: 14.5px;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                opacity: .85;
+                margin-bottom: 22px;
+                font-weight: 600;
+                color: #f0c560;
+            }
+
+            .bb-glance-link {
+                display: inline-block;
+                padding: 13px 30px;
+                border: 2px solid #003d73;
+                border-radius: 999px;
+                color: #003d73;
+                text-decoration: none;
+                font-weight: 600;
+                transition: .3s;
+                font-size: 14px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .bb-glance-link:hover {
+                background: #003d73;
+                color: #fff;
+                transform: translateY(-2px);
+            }
+
+            @media(max-width:1000px) {
+                .bb-glance-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 12px;
+                }
+                .bb-stat:nth-child(4),
+                .bb-stat:nth-child(5) {
+                    grid-column: span 1;
+                }
+            }
+
+            @media(max-width:600px) {
+                .bb-glance {
+                    padding: 40px 6% 36px;
+                }
+                .bb-glance-head h2 {
+                    font-size: 24px;
+                }
+                .bb-glance-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .bb-stat:nth-child(5) {
+                    grid-column: span 2;
+                }
+                .bb-stat-number {
+                    font-size: 26px;
+                }
+                .bb-stat-number .bb-suffix {
+                    font-size: 26px;
+                }
+                .bb-stat {
+                    padding: 20px 10px;
+                }
+            }
+        </style>
+
+        <section class="bb-glance" id="bb-glance" aria-label="Bluebells School International at a glance">
+
+            <div class="bb-glance-honeycomb">
+                <svg viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <!-- concentric arcs from bottom-left -->
+                    <circle cx="0" cy="340" r="120" fill="none" stroke="#003d73" stroke-opacity="0.14" stroke-width="1.5"/>
+                    <circle cx="0" cy="340" r="200" fill="none" stroke="#f0c560" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <circle cx="0" cy="340" r="290" fill="none" stroke="#003d73" stroke-opacity="0.12" stroke-width="1.5"/>
+                    <circle cx="0" cy="340" r="390" fill="none" stroke="#f0c560" stroke-opacity="0.14" stroke-width="1"/>
+                    <circle cx="0" cy="340" r="500" fill="none" stroke="#003d73" stroke-opacity="0.10" stroke-width="1"/>
+                    <!-- concentric arcs from top-right -->
+                    <circle cx="1200" cy="0" r="150" fill="none" stroke="#f0c560" stroke-opacity="0.16" stroke-width="1.5"/>
+                    <circle cx="1200" cy="0" r="260" fill="none" stroke="#003d73" stroke-opacity="0.13" stroke-width="1.5"/>
+                    <circle cx="1200" cy="0" r="380" fill="none" stroke="#f0c560" stroke-opacity="0.13" stroke-width="1"/>
+                    <circle cx="1200" cy="0" r="510" fill="none" stroke="#003d73" stroke-opacity="0.10" stroke-width="1"/>
+                    <!-- scattered dots -->
+                    <circle cx="180" cy="40"  r="2.5" fill="#f0c560" fill-opacity="0.40"/>
+                    <circle cx="340" cy="90"  r="1.8" fill="#003d73" fill-opacity="0.25"/>
+                    <circle cx="520" cy="28"  r="2.2" fill="#f0c560" fill-opacity="0.35"/>
+                    <circle cx="700" cy="70"  r="1.5" fill="#003d73" fill-opacity="0.22"/>
+                    <circle cx="880" cy="35"  r="2.8" fill="#f0c560" fill-opacity="0.30"/>
+                    <circle cx="1050" cy="80" r="1.8" fill="#003d73" fill-opacity="0.25"/>
+                    <circle cx="90"  cy="200" r="2"   fill="#003d73" fill-opacity="0.20"/>
+                    <circle cx="420" cy="260" r="2.5" fill="#f0c560" fill-opacity="0.30"/>
+                    <circle cx="650" cy="180" r="1.5" fill="#003d73" fill-opacity="0.20"/>
+                    <circle cx="950" cy="220" r="2"   fill="#f0c560" fill-opacity="0.30"/>
+                    <circle cx="1130" cy="160" r="2.5" fill="#003d73" fill-opacity="0.22"/>
+                </svg>
+            </div>
+
+            <div class="bb-glance-head">
+                <span class="bb-glance-eyebrow">By The Numbers</span>
+                <h2>Bluebells at a Glance</h2>
+            </div>
+
+            <div class="bb-glance-grid">
+
+                <div class="bb-stat">
+                    <div class="bb-stat-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.4 5.7 20.8 8 13.6l-6-4.4h7.6z" />
+                        </svg>
+                    </div>
+                    <div class="bb-stat-number"><span class="bb-count" data-target="69">0</span><span
+                            class="bb-suffix">+</span></div>
+                    <div class="bb-stat-label">Years of Excellence</div>
+                </div>
+
+                <div class="bb-stat">
+                    <div class="bb-stat-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18" />
+                        </svg>
+                    </div>
+                    <div class="bb-stat-number"><span class="bb-count" data-target="13">0</span></div>
+                    <div class="bb-stat-label">Nationalities</div>
+                </div>
+
+                <div class="bb-stat">
+                    <div class="bb-stat-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 8h14M5 8a9 9 0 1 0 9 13M8 4a14 14 0 0 1 0 16" />
+                        </svg>
+                    </div>
+                    <div class="bb-stat-number"><span class="bb-count" data-target="6">0</span></div>
+                    <div class="bb-stat-label">Foreign Languages</div>
+                </div>
+
+                <div class="bb-stat">
+                    <div class="bb-stat-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2l9 4.5v6c0 5-4 8.5-9 9.5-5-1-9-4.5-9-9.5v-6L12 2z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <div class="bb-stat-number">100<span class="bb-suffix">%</span></div>
+                    <div class="bb-stat-label">Academic Outcomes</div>
+                </div>
+
+                <div class="bb-stat">
+                    <div class="bb-stat-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2" />
+                            <circle cx="19" cy="9" r="2.5" />
+                            <path d="M19 15v6M16 18h6" />
+                        </svg>
+                    </div>
+                    <div class="bb-stat-number">18<span class="bb-suffix">:1</span></div>
+                    <div class="bb-stat-label">Student Teacher Ratio</div>
+                </div>
+
+            </div>
+
+            <div class="bb-glance-footer">
+                <a href="/about-us" class="bb-glance-link">About Us</a>
+            </div>
+
+        </section>
+
+        <script>
+            (function () {
+                const section = document.getElementById('bb-glance');
+                const stats = section.querySelectorAll('.bb-stat');
+                const counters = section.querySelectorAll('.bb-count');
+                let animated = false;
+
+                function animateCounters() {
+                    counters.forEach(el => {
+                        const target = parseInt(el.getAttribute('data-target'), 10);
+                        const duration = 1400;
+                        const start = performance.now();
+
+                        function step(now) {
+                            const progress = Math.min((now - start) / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            el.textContent = Math.floor(eased * target);
+                            if (progress < 1) {
+                                requestAnimationFrame(step);
+                            } else {
+                                el.textContent = target;
+                            }
+                        }
+                        requestAnimationFrame(step);
+                    });
+                }
+
+                function revealCards() {
+                    stats.forEach((card, i) => {
+                        setTimeout(() => card.classList.add('bb-in'), i * 100);
+                    });
+                }
+
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting && !animated) {
+                                animated = true;
+                                revealCards();
+                                animateCounters();
+                                observer.disconnect();
+                            }
+                        });
+                    }, { threshold: 0.3 });
+
+                    observer.observe(section);
+                } else {
+                    revealCards();
+                    animateCounters();
+                }
+            })();
+        </script>
+    </section>
+    
+<section id="3">
+        <style>
+            .bb-diff {
+                background: #03111f;
+                padding: 52px 8%;
+                /* font-family: Inter, sans-serif; */
+                position: relative;
+                overflow: hidden;
+            }
+            /* Blurred, darkened bg image as a pseudo-element so content stays crisp */
+            .bb-diff::before {
+                content: '';
+                position: absolute;
+                inset: -16px;
+                background-image: url('https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/aedbd0b8-ffb3-4fcf-a53f-4dfceedb7b89/260A5295.JPG');
+                background-size: cover;
+                background-position: center;
+                filter: blur(3px) brightness(.3) saturate(.55);
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            .bb-diff * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-diff-head {
+                text-align: center;
+                max-width: 680px;
+                margin: 0 auto 40px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .bb-diff-eyebrow {
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-size: 12.5px;
+                font-weight: 600;
+                color: #f0c560;
+                display: block;
+                margin-bottom: 12px;
+            }
+
+            .bb-diff-head h2 {
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #fff;
+                margin-bottom: 14px;
+            }
+
+            .bb-diff-head p {
+                font-size: 15.5px;
+                line-height: 1.65;
+                color: rgba(255,255,255,.72);
+            }
+
+            .bb-diff-grid {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 190px 190px 190px;
+                gap: 20px;
+                max-width: 1280px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+            }
+
+            .bb-card {
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+                text-decoration: none;
+                display: block;
+                color: #fff;
+            }
+
+            /* card 1: Academic Excellence â€” tall hero, left column, full height */
+            .bb-card.bb-c1 {
+                grid-column: 1 / 3;
+                grid-row: 1 / 4;
+            }
+
+            /* card 2: Future Ready Learning â€” wide top strip */
+            .bb-card.bb-c2 {
+                grid-column: 3 / 7;
+                grid-row: 1 / 2;
+            }
+
+            /* card 3: Global Citizenship â€” square */
+            .bb-card.bb-c3 {
+                grid-column: 3 / 5;
+                grid-row: 2 / 4;
+            }
+
+            /* card 4: Arts & Culture â€” square */
+            .bb-card.bb-c4 {
+                grid-column: 5 / 7;
+                grid-row: 2 / 3;
+            }
+
+            /* card 5: Leadership & Service */
+            .bb-card.bb-c5 {
+                grid-column: 5 / 6;
+                grid-row: 3 / 4;
+            }
+
+            /* card 6: Student Wellbeing */
+            .bb-card.bb-c6 {
+                grid-column: 6 / 7;
+                grid-row: 3 / 4;
+            }
+
+            .bb-card-img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 1.2s cubic-bezier(.2, .8, .2, 1);
+            }
+
+            .bb-card:hover .bb-card-img {
+                transform: scale(1.08);
+            }
+
+            .bb-card-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, rgba(0, 15, 35, .05) 30%, rgba(0, 15, 35, .85) 100%);
+                transition: background .4s ease;
+            }
+
+            .bb-card:hover .bb-card-overlay {
+                background: linear-gradient(180deg, rgba(0, 20, 45, .35) 10%, rgba(0, 15, 35, .92) 100%);
+            }
+
+            .bb-card-body {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 26px;
+                z-index: 2;
+            }
+
+            .bb-card.bb-c5 .bb-card-body,
+            .bb-card.bb-c6 .bb-card-body {
+                padding: 18px;
+            }
+
+            .bb-card-tag {
+                display: inline-block;
+                font-size: 11px;
+                letter-spacing: 1.8px;
+                text-transform: uppercase;
+                font-weight: 700;
+                background: rgba(255, 255, 255, .15);
+                border: 1px solid rgba(255, 255, 255, .35);
+                padding: 5px 11px;
+                border-radius: 999px;
+                margin-bottom: 12px;
+                backdrop-filter: blur(4px);
+            }
+
+            .bb-card.bb-c5 .bb-card-tag,
+            .bb-card.bb-c6 .bb-card-tag {
+                display: none;
+            }
+
+            .bb-card h3 {
+                font-size: 21px;
+                font-weight: 700;
+                margin-bottom: 6px;
+                line-height: 1.25;
+                color: #fff;
+            }
+
+            .bb-card.bb-c1 h3 {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            .bb-card.bb-c2 h3 {
+                font-size: 23px;
+            }
+
+            .bb-card.bb-c5 h3,
+            .bb-card.bb-c6 h3 {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+
+            .bb-card p {
+                font-size: 14px;
+                line-height: 1.55;
+                opacity: .88;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .45s ease, opacity .3s ease;
+            }
+
+            .bb-card.bb-c1 p,
+            .bb-card.bb-c2 p {
+                max-height: 70px;
+                opacity: .9;
+            }
+
+            .bb-card.bb-c5 p,
+            .bb-card.bb-c6 p {
+                display: none;
+            }
+
+            .bb-card:hover p {
+                max-height: 70px;
+                opacity: .95;
+            }
+
+            .bb-card-arrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 12px;
+                font-size: 13.5px;
+                font-weight: 600;
+                opacity: 0;
+                transform: translateY(8px);
+                transition: opacity .35s ease, transform .35s ease;
+            }
+
+            .bb-card:hover .bb-card-arrow,
+            .bb-card.bb-c1 .bb-card-arrow,
+            .bb-card.bb-c2 .bb-card-arrow {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .bb-card.bb-c5 .bb-card-arrow,
+            .bb-card.bb-c6 .bb-card-arrow {
+                display: none;
+            }
+
+            .bb-card-arrow svg {
+                width: 15px;
+                height: 15px;
+                stroke: #fff;
+                fill: none;
+                stroke-width: 2;
+                transition: transform .35s ease;
+            }
+
+            .bb-card:hover .bb-card-arrow svg {
+                transform: translateX(4px);
+            }
+
+            /* tablet: simplify to a clean 2-column grid, all cards equal-ish height */
+            @media(max-width:1100px) {
+                .bb-diff-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: none;
+                }
+
+                .bb-card.bb-c1,
+                .bb-card.bb-c2,
+                .bb-card.bb-c3,
+                .bb-card.bb-c4,
+                .bb-card.bb-c5,
+                .bb-card.bb-c6 {
+                    grid-column: span 1;
+                    grid-row: auto;
+                    height: 280px;
+                }
+
+                .bb-card.bb-c1 {
+                    grid-column: 1 / 3;
+                    height: 340px;
+                }
+
+                .bb-card.bb-c5,
+                .bb-card.bb-c6 {
+                    height: 220px;
+                }
+
+                .bb-card.bb-c5 .bb-card-tag,
+                .bb-card.bb-c6 .bb-card-tag {
+                    display: inline-block;
+                }
+
+                .bb-card.bb-c5 h3,
+                .bb-card.bb-c6 h3 {
+                    font-size: 19px;
+                }
+
+                .bb-card p {
+                    max-height: 70px;
+                    opacity: .9;
+                }
+
+                .bb-card-arrow {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* mobile: single column stack */
+            @media(max-width:640px) {
+                .bb-diff {
+                    padding: 40px 6%;
+                }
+
+                .bb-diff-head h2 {
+                    font-size: 26px;
+                }
+
+                .bb-diff-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .bb-card.bb-c1,
+                .bb-card.bb-c2,
+                .bb-card.bb-c3,
+                .bb-card.bb-c4,
+                .bb-card.bb-c5,
+                .bb-card.bb-c6 {
+                    grid-column: span 1;
+                    height: 260px;
+                }
+
+                .bb-card.bb-c5 p,
+                .bb-card.bb-c6 p {
+                    display: block;
+                    max-height: 60px;
+                    opacity: .9;
+                }
+            }
+        </style>
+
+        <section class="bb-diff" aria-label="The Bluebells Difference">
+
+            <div class="bb-diff-head">
+                <span class="bb-diff-eyebrow">What Sets Us Apart</span>
+                <h2>The Bluebells Difference</h2>
+                <p>Six pillars shape every student's journey at Bluebells â€” academic depth, future-focused skills,
+                    global awareness, creative expression, leadership and genuine wellbeing.</p>
+            </div>
+
+            <div class="bb-diff-grid">
+
+                <a href="/learning/academic-excellence" class="bb-card bb-c1">
+                    <img class="bb-card-img"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/5012b1ae-128b-4109-8cce-4c7b0ce38f77/image_2021-10-15_152908.png"
+                        alt="Students engaged in academic learning at Bluebells">
+                    <div class="bb-card-overlay"></div>
+                    <div class="bb-card-body">
+                        <span class="bb-card-tag">Learning</span>
+                        <h3>Academic Excellence</h3>
+                        <p>A rigorous, inquiry-led curriculum that builds strong fundamentals and consistently
+                            outstanding results.</p>
+                        <span class="bb-card-arrow">Explore Academics <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+
+                <a href="/learning/future-ready" class="bb-card bb-c2">
+                    <img class="bb-card-img"
+                        src="https://i.postimg.cc/66jntCJF/image.png"
+                        alt="Students working with robotics and technology">
+                    <div class="bb-card-overlay"></div>
+                    <div class="bb-card-body">
+                        <span class="bb-card-tag">Learning</span>
+                        <h3>Future Ready Learning</h3>
+                        <p>AI, robotics, coding and design thinking woven into the everyday classroom experience.</p>
+                        <span class="bb-card-arrow">Discover More <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+
+                <a href="/global-learning" class="bb-card bb-c3">
+                    <img class="bb-card-img"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/6aa01b20-c3f2-4109-a20a-93f4a990f2c4/_22A7201.JPG"
+                        alt="Students learning about global citizenship">
+                    <div class="bb-card-overlay"></div>
+                    <div class="bb-card-body">
+                        <span class="bb-card-tag">Global Learning</span>
+                        <h3>Global Citizenship</h3>
+                        <p>Exchange programmes and international partnerships that build empathy beyond borders.</p>
+                        <span class="bb-card-arrow">See Global Programmes <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+
+                <a href="/student-life/arts-culture" class="bb-card bb-c4">
+                    <img class="bb-card-img"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/16e31813-df76-4411-a1f2-bdb9f75930c8/_22A6767.JPG"
+                        alt="Students engaged in arts and creative culture">
+                    <div class="bb-card-overlay"></div>
+                    <div class="bb-card-body">
+                        <span class="bb-card-tag">Student Life</span>
+                        <h3>Arts &amp; Culture</h3>
+                        <p>Music, dance, drama and visual art give every student a stage to express their voice.</p>
+                        <span class="bb-card-arrow">Explore Arts <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+
+                <a href="/student-life/leadership-service" class="bb-card bb-c5">
+                    <img class="bb-card-img"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/8789cb50-46b9-4944-a3fc-59be2ad6b0fc/148A0336.JPG"
+                        alt="Student leadership and public speaking">
+                    <div class="bb-card-overlay"></div>
+                    <div class="bb-card-body">
+                        <span class="bb-card-tag">Student Life</span>
+                        <h3>Leadership &amp; Service</h3>
+                        <p>Student councils, community outreach and service projects that build character and
+                            responsibility.</p>
+                        <span class="bb-card-arrow">Learn More <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+
+                <a href="/student-life/wellbeing" class="bb-card bb-c6">
+                    <img class="bb-card-img"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/7056dd20-c3e6-46d0-b702-7475b0e59efe/IMG_7502.JPG"
+                        alt="Students in a calm wellbeing focused environment">
+                    <div class="bb-card-overlay"></div>
+                    <div class="bb-card-body">
+                        <span class="bb-card-tag">Student Life</span>
+                        <h3>Student Wellbeing</h3>
+                        <p>Dedicated counselling, mindfulness and pastoral care so every child feels seen and supported.
+                        </p>
+                        <span class="bb-card-arrow">See Wellbeing <svg viewBox="0 0 24 24">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+    </section>
+    
+<section id="4">
+        <style>
+            .bb-phil {
+                background: #fdfaf4;
+                padding: 52px 8%;
+                /* font-family: Inter, sans-serif; */
+                position: relative;
+                overflow: hidden;
+            }
+            .bb-phil::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image:
+                    linear-gradient(rgba(0,61,115,.055) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,61,115,.055) 1px, transparent 1px);
+                background-size: 44px 44px;
+                pointer-events: none;
+            }
+            .bb-phil-decor {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                overflow: hidden;
+                pointer-events: none;
+            }
+            .bb-phil-decor svg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .bb-phil * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-phil-statement {
+                text-align: center;
+                max-width: 780px;
+                margin: 0 auto 56px;
+                position: relative;
+                z-index: 3;
+            }
+
+            .bb-phil-eyebrow {
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 600;
+                color: #2596be;
+                display: block;
+                margin-bottom: 22px;
+            }
+
+            .bb-phil-statement h2 {
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 1.3;
+                color: #1f2733;
+            }
+
+            .bb-phil-statement h2 span {
+                color: #003d73;
+            }
+
+            .bb-phil-body {
+                display: grid;
+                grid-template-columns: 0.9fr 1.3fr 0.8fr;
+                gap: 50px;
+                max-width: 1280px;
+                margin: 0 auto;
+                align-items: center;
+                position: relative;
+                z-index: 2;
+            }
+
+            /* ---------- LEFT: image card ---------- */
+            .bb-phil-imgcard {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 3/4;
+                border-radius: 24px;
+                overflow: hidden;
+                box-shadow: 0 30px 60px rgba(0, 30, 70, .15);
+            }
+
+            .bb-phil-img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+                transform: scale(1.05);
+                transition: opacity .7s ease, transform 1.4s ease;
+            }
+
+            .bb-phil-img.bb-active {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .bb-phil-imgcard:after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, rgba(0, 15, 35, 0) 55%, rgba(0, 15, 35, .55) 100%);
+                z-index: 1;
+            }
+
+            .bb-phil-imgcaption {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 22px 24px;
+                z-index: 2;
+                color: #fff;
+            }
+
+            .bb-phil-imgcaption-label {
+                font-size: 11.5px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 700;
+                opacity: .85;
+                display: block;
+                margin-bottom: 4px;
+                transition: opacity .3s ease;
+            }
+
+            .bb-phil-imgcaption-title {
+                font-size: 19px;
+                font-weight: 700;
+                transition: opacity .3s ease;
+            }
+
+            /* ---------- MIDDLE: accordion ---------- */
+            .bb-accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .bb-acc-item {
+                border: 1px solid #e4e8ee;
+                border-radius: 16px;
+                background: #fff;
+                overflow: hidden;
+                transition: border-color .3s ease, box-shadow .3s ease;
+            }
+
+            .bb-acc-item.bb-open {
+                border-color: #003d73;
+                box-shadow: 0 12px 30px rgba(0, 30, 70, .08);
+            }
+
+            .bb-acc-head {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+                padding: 22px 24px;
+                cursor: pointer;
+                background: none;
+                border: none;
+                width: 100%;
+                text-align: left;
+                font-family: inherit;
+            }
+
+            .bb-acc-num {
+                font-size: 14px;
+                font-weight: 700;
+                color: #9aa8ba;
+                min-width: 26px;
+                transition: color .3s ease;
+            }
+
+            .bb-acc-item.bb-open .bb-acc-num {
+                color: #003d73;
+            }
+
+            .bb-acc-title {
+                flex: 1;
+                font-size: 19px;
+                font-weight: 700;
+                color: #1f2733;
+            }
+
+            .bb-acc-icon {
+                width: 22px;
+                height: 22px;
+                flex-shrink: 0;
+                position: relative;
+            }
+
+            .bb-acc-icon:before,
+            .bb-acc-icon:after {
+                content: "";
+                position: absolute;
+                background: #003d73;
+                border-radius: 2px;
+                transition: transform .3s ease;
+            }
+
+            .bb-acc-icon:before {
+                width: 14px;
+                height: 2px;
+                top: 10px;
+                left: 4px;
+            }
+
+            .bb-acc-icon:after {
+                width: 2px;
+                height: 14px;
+                top: 4px;
+                left: 10px;
+            }
+
+            .bb-acc-item.bb-open .bb-acc-icon:after {
+                transform: rotate(90deg);
+            }
+
+            .bb-acc-panel {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .4s ease;
+            }
+
+            .bb-acc-panel-inner {
+                padding: 0 24px 24px 68px;
+                font-size: 15.5px;
+                line-height: 1.7;
+                color: #5c6c7a;
+            }
+
+            /* ---------- RIGHT: orbit graphic ---------- */
+            .bb-orbit-wrap {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 1/1;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+
+            .bb-orbit-wrap svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            .bb-orbit-ring {
+                fill: none;
+                stroke: #003d73;
+                stroke-opacity: .22;
+                stroke-width: 2;
+            }
+
+            .bb-orbit-ring2 {
+                fill: none;
+                stroke: #003d73;
+                stroke-opacity: .45;
+                stroke-width: 1.5;
+                stroke-dasharray: 4 8;
+                animation: bbSpin 30s linear infinite;
+                transform-origin: center;
+            }
+
+            .bb-orbit-ring3 {
+                fill: none;
+                stroke: #2596be;
+                stroke-width: 2;
+                stroke-opacity: .55;
+                animation: bbSpinRev 50s linear infinite;
+                transform-origin: center;
+                stroke-dasharray: 2 12;
+            }
+
+            @keyframes bbSpin {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes bbSpinRev {
+                from {
+                    transform: rotate(360deg);
+                }
+
+                to {
+                    transform: rotate(0deg);
+                }
+            }
+
+            .bb-orbit-core {
+                fill: #003d73;
+                filter: drop-shadow(0 0 8px rgba(0,61,115,.4));
+            }
+
+            .bb-orbit-dot {
+                fill: #f0c560;
+                filter: drop-shadow(0 0 5px rgba(240,197,96,.7));
+                animation: bbOrbit 10s linear infinite;
+                transform-origin: 190px 190px;
+            }
+
+            .bb-orbit-dot2 {
+                fill: #2596be;
+                filter: drop-shadow(0 0 5px rgba(37,150,190,.7));
+                animation: bbOrbit 18s linear infinite reverse;
+                transform-origin: 190px 190px;
+            }
+
+            .bb-orbit-dot3 {
+                fill: #fff;
+                filter: drop-shadow(0 0 4px rgba(255,255,255,.6));
+                animation: bbOrbit 26s linear infinite;
+                transform-origin: 190px 190px;
+            }
+
+            @keyframes bbOrbit {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .bb-orbit-label {
+                position: absolute;
+                bottom: -28px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 12.5px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: #5c6c7a;
+                font-weight: 600;
+                white-space: nowrap;
+            }
+
+            /* ---------- footer ---------- */
+            .bb-phil-footer {
+                text-align: center;
+                margin-top: 56px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-phil-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 16px 36px;
+                background: #003d73;
+                color: #fff;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 15px;
+                transition: .35s;
+            }
+
+            .bb-phil-link:hover {
+                background: #00356b;
+                transform: translateY(-3px);
+            }
+
+            .bb-phil-link svg {
+                width: 16px;
+                height: 16px;
+                stroke: #fff;
+                fill: none;
+                stroke-width: 2;
+                transition: transform .3s ease;
+            }
+
+            .bb-phil-link:hover svg {
+                transform: translateX(4px);
+            }
+
+            @media(max-width:1100px) {
+                .bb-phil-body {
+                    grid-template-columns: 1fr 1.3fr;
+                }
+
+                .bb-orbit-wrap {
+                    display: none;
+                }
+            }
+
+            @media(max-width:900px) {
+                .bb-phil-body {
+                    grid-template-columns: 1fr;
+                    gap: 44px;
+                }
+
+                .bb-phil-imgcard {
+                    max-width: 340px;
+                    margin: 0 auto;
+                }
+
+                .bb-phil-statement h2 {
+                    font-size: 28px;
+                }
+            }
+
+            @media(max-width:560px) {
+                .bb-phil {
+                    padding: 40px 6%;
+                }
+
+                .bb-phil-statement {
+                    margin-bottom: 40px;
+                }
+
+                .bb-phil-statement h2 {
+                    font-size: 24px;
+                }
+
+                .bb-acc-title {
+                    font-size: 17px;
+                }
+
+                .bb-acc-panel-inner {
+                    padding: 0 20px 22px 50px;
+                }
+
+                .bb-acc-head {
+                    padding: 18px 20px;
+                    gap: 12px;
+                }
+            }
+        </style>
+
+        <section class="bb-phil" aria-label="School philosophy: One Planet, One Family, Mankind">
+
+            <div class="bb-phil-decor">
+                <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <!-- gold diamond accents -->
+                    <polygon points="160,36 166,50 160,64 154,50" fill="#f0c560" fill-opacity="0.30"/>
+                    <polygon points="420,18 424,28 420,38 416,28" fill="#f0c560" fill-opacity="0.22"/>
+                    <polygon points="720,55 727,70 720,85 713,70" fill="#f0c560" fill-opacity="0.28"/>
+                    <polygon points="970,28 975,40 970,52 965,40" fill="#f0c560" fill-opacity="0.20"/>
+                    <polygon points="80,320 86,334 80,348 74,334" fill="#f0c560" fill-opacity="0.18"/>
+                    <polygon points="340,480 346,494 340,508 334,494" fill="#f0c560" fill-opacity="0.22"/>
+                    <polygon points="900,410 906,424 900,438 894,424" fill="#f0c560" fill-opacity="0.20"/>
+                    <polygon points="1100,200 1106,214 1100,228 1094,214" fill="#f0c560" fill-opacity="0.18"/>
+                    <!-- navy plus/cross accents -->
+                    <line x1="290" y1="95" x2="290" y2="111" stroke="#003d73" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <line x1="283" y1="103" x2="297" y2="103" stroke="#003d73" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <line x1="560" y1="40" x2="560" y2="56" stroke="#003d73" stroke-opacity="0.15" stroke-width="1.5"/>
+                    <line x1="553" y1="48" x2="567" y2="48" stroke="#003d73" stroke-opacity="0.15" stroke-width="1.5"/>
+                    <line x1="850" y1="75" x2="850" y2="91" stroke="#003d73" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <line x1="843" y1="83" x2="857" y2="83" stroke="#003d73" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <line x1="200" y1="440" x2="200" y2="456" stroke="#003d73" stroke-opacity="0.15" stroke-width="1.5"/>
+                    <line x1="193" y1="448" x2="207" y2="448" stroke="#003d73" stroke-opacity="0.15" stroke-width="1.5"/>
+                    <line x1="660" y1="360" x2="660" y2="376" stroke="#003d73" stroke-opacity="0.13" stroke-width="1.5"/>
+                    <line x1="653" y1="368" x2="667" y2="368" stroke="#003d73" stroke-opacity="0.13" stroke-width="1.5"/>
+                    <line x1="1050" y1="310" x2="1050" y2="326" stroke="#003d73" stroke-opacity="0.15" stroke-width="1.5"/>
+                    <line x1="1043" y1="318" x2="1057" y2="318" stroke="#003d73" stroke-opacity="0.15" stroke-width="1.5"/>
+                </svg>
+            </div>
+
+            <div class="bb-phil-statement">
+                <span class="bb-phil-eyebrow">Our Guiding Philosophy</span>
+                <h2>One Planet <span>One Family</span> Mankind</h2>
+            </div>
+
+            <div class="bb-phil-body">
+
+                <div class="bb-phil-imgcard" id="bb-phil-imgcard">
+                    <img class="bb-phil-img bb-active" data-key="vision"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1518dfe5-2b56-46aa-a833-105680693084/EJ2A8432.JPG"
+                        alt="Vision at Bluebells">
+                    <img class="bb-phil-img" data-key="mission"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/239832b5-8602-4588-b8ea-cdd1c3dbffe1/IMAG3077.jpg"
+                        alt="Mission at Bluebells">
+                    <img class="bb-phil-img" data-key="values"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/fabbf54b-b4cc-4c1f-bb73-753b25f04378/_22A4004+%281%29.JPG"
+                        alt="Values at Bluebells">
+                    <img class="bb-phil-img" data-key="global"
+                        src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/c4ee51ab-9363-4c67-b466-dcf297aa206f/image_2021-10-15_152822.png"
+                        alt="Global Responsibility at Bluebells">
+
+                    <div class="bb-phil-imgcaption">
+                        <span class="bb-phil-imgcaption-label" id="bb-phil-imgcaption-label">Pillar 01</span>
+                        <span class="bb-phil-imgcaption-title" id="bb-phil-imgcaption-title">Vision</span>
+                    </div>
+                </div>
+
+                <div class="bb-accordion" id="bb-accordion">
+
+                    <div class="bb-acc-item bb-open" data-key="vision">
+                        <button class="bb-acc-head" aria-expanded="true">
+                            <span class="bb-acc-num">01</span>
+                            <span class="bb-acc-title">Vision</span>
+                            <span class="bb-acc-icon"></span>
+                        </button>
+                        <div class="bb-acc-panel">
+                            <div class="bb-acc-panel-inner">
+                                To nurture confident, compassionate global citizens who lead with integrity and see the
+                                world as one connected family â€” equipped not just with knowledge, but with wisdom and
+                                purpose.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bb-acc-item" data-key="mission">
+                        <button class="bb-acc-head" aria-expanded="false">
+                            <span class="bb-acc-num">02</span>
+                            <span class="bb-acc-title">Mission</span>
+                            <span class="bb-acc-icon"></span>
+                        </button>
+                        <div class="bb-acc-panel">
+                            <div class="bb-acc-panel-inner">
+                                To provide a holistic education that balances academic rigour with creativity, critical
+                                thinking and emotional growth â€” preparing every student for a future that demands
+                                adaptability and heart in equal measure.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bb-acc-item" data-key="values">
+                        <button class="bb-acc-head" aria-expanded="false">
+                            <span class="bb-acc-num">03</span>
+                            <span class="bb-acc-title">Values</span>
+                            <span class="bb-acc-icon"></span>
+                        </button>
+                        <div class="bb-acc-panel">
+                            <div class="bb-acc-panel-inner">
+                                Integrity, respect, curiosity and kindness sit at the heart of every classroom,
+                                playground and conversation â€” values that shape character long after exams are
+                                forgotten.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bb-acc-item" data-key="global">
+                        <button class="bb-acc-head" aria-expanded="false">
+                            <span class="bb-acc-num">04</span>
+                            <span class="bb-acc-title">Global Responsibility</span>
+                            <span class="bb-acc-icon"></span>
+                        </button>
+                        <div class="bb-acc-panel">
+                            <div class="bb-acc-panel-inner">
+                                Sustainability, cultural understanding and service to community are not electives at
+                                Bluebells â€” they are woven into the everyday, raising students who feel responsible for
+                                the planet they will inherit.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="bb-orbit-wrap">
+                    <svg viewBox="0 0 380 380">
+                        <defs>
+                            <radialGradient id="coreGrad" cx="40%" cy="35%">
+                                <stop offset="0%" stop-color="#2596be"/>
+                                <stop offset="100%" stop-color="#003d73"/>
+                            </radialGradient>
+                        </defs>
+                        <circle class="bb-orbit-ring" cx="190" cy="190" r="168" />
+                        <circle class="bb-orbit-ring2" cx="190" cy="190" r="128" />
+                        <circle class="bb-orbit-ring3" cx="190" cy="190" r="88" />
+                        <circle cx="190" cy="190" r="38" fill="url(#coreGrad)" class="bb-orbit-core"/>
+                        <circle class="bb-orbit-dot" cx="190" cy="22" r="10" />
+                        <circle class="bb-orbit-dot2" cx="318" cy="190" r="9" />
+                        <circle class="bb-orbit-dot3" cx="190" cy="62" r="6" />
+                    </svg>
+                    <span class="bb-orbit-label">One Planet, One Family</span>
+                </div>
+
+            </div>
+
+            <div class="bb-phil-footer">
+                <a href="/about-us/vision-philosophy" class="bb-phil-link">
+                    Vision &amp; Philosophy
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                </a>
+            </div>
+
+        </section>
+
+        <script>
+            (function () {
+                const items = document.querySelectorAll('#bb-accordion .bb-acc-item');
+                const images = document.querySelectorAll('#bb-phil-imgcard .bb-phil-img');
+                const captionLabel = document.getElementById('bb-phil-imgcaption-label');
+                const captionTitle = document.getElementById('bb-phil-imgcaption-title');
+
+                const pillarNames = {
+                    vision: 'Vision',
+                    mission: 'Mission',
+                    values: 'Values',
+                    global: 'Global Responsibility'
+                };
+                const pillarNums = {
+                    vision: '01',
+                    mission: '02',
+                    values: '03',
+                    global: '04'
+                };
+
+                function setPanelHeight(item, open) {
+                    const panel = item.querySelector('.bb-acc-panel');
+                    const inner = item.querySelector('.bb-acc-panel-inner');
+                    const head = item.querySelector('.bb-acc-head');
+                    if (open) {
+                        panel.style.maxHeight = inner.scrollHeight + 'px';
+                        item.classList.add('bb-open');
+                        head.setAttribute('aria-expanded', 'true');
+                    } else {
+                        panel.style.maxHeight = '0px';
+                        item.classList.remove('bb-open');
+                        head.setAttribute('aria-expanded', 'false');
+                    }
+                }
+
+                function setImage(key) {
+                    images.forEach(img => {
+                        img.classList.toggle('bb-active', img.getAttribute('data-key') === key);
+                    });
+                    captionLabel.textContent = 'Pillar ' + pillarNums[key];
+                    captionTitle.textContent = pillarNames[key];
+                }
+
+                items.forEach(item => {
+                    const head = item.querySelector('.bb-acc-head');
+                    const key = item.getAttribute('data-key');
+
+                    head.addEventListener('click', () => {
+                        const isOpen = item.classList.contains('bb-open');
+                        items.forEach(i => setPanelHeight(i, false));
+                        if (!isOpen) {
+                            setPanelHeight(item, true);
+                            setImage(key);
+                        }
+                    });
+                });
+
+                function initFirst() {
+                    const first = items[0];
+                    if (first) {
+                        setPanelHeight(first, true);
+                    }
+                }
+
+                window.addEventListener('load', initFirst);
+                setTimeout(initFirst, 50);
+            })();
+        </script>
+    </section>
+    
+<section id="5">
+        <style>
+            .bb-future {
+                background: #03111f;
+                padding: 52px 8%;
+                /* font-family: Inter, sans-serif; */
+                position: relative;
+                overflow: hidden;
+            }
+            .bb-future::before {
+                content: '';
+                position: absolute;
+                inset: -16px;
+                background-image: url('https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1518dfe5-2b56-46aa-a833-105680693084/EJ2A8432.JPG');
+                background-size: cover;
+                background-position: center;
+                filter: blur(3px) brightness(.3) saturate(.55);
+                pointer-events: none;
+            }
+
+            .bb-future * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-future-head {
+                text-align: center;
+                max-width: 680px;
+                margin: 0 auto 40px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-future-eyebrow {
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-size: 12.5px;
+                font-weight: 600;
+                color: #f0c560;
+                display: block;
+                margin-bottom: 12px;
+            }
+
+            .bb-future-head h2 {
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #fff;
+                margin-bottom: 14px;
+            }
+
+            .bb-future-head p {
+                font-size: 15.5px;
+                line-height: 1.65;
+                color: rgba(255,255,255,.72);
+            }
+
+            .bb-future-wrap {
+                max-width: 1140px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 28px;
+                position: relative;
+            }
+
+            .bb-tab {
+                padding: 11px 20px;
+                border-radius: 999px;
+                background: #fff;
+                border: 1.5px solid #d6e4ea;
+                color: #5c6c7a;
+                font-family: inherit;
+                font-size: 13.5px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: .3s;
+                white-space: nowrap;
+            }
+
+            .bb-tab:hover {
+                border-color: #2596be;
+                color: #003d73;
+            }
+
+            .bb-tab.bb-active {
+                background: #003d73;
+                border-color: #003d73;
+                color: #fff;
+            }
+
+            .bb-panel-card {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                background: #fff;
+                border: 1px solid #e2ebef;
+                border-radius: 20px;
+                overflow: hidden;
+                min-height: 380px;
+                box-shadow: 0 18px 40px rgba(0, 61, 115, .08);
+            }
+
+            .bb-panel-imgwrap {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .bb-panel-img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+                transform: scale(1.05);
+                transition: opacity .6s ease, transform 1.2s ease;
+            }
+
+            .bb-panel-img.bb-active {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .bb-panel-content {
+                padding: 40px 44px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+            }
+
+            .bb-panel-text {
+                display: none;
+            }
+
+            .bb-panel-text.bb-active {
+                display: block;
+                animation: bbFadeUp .5s ease;
+            }
+
+            @keyframes bbFadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(14px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .bb-panel-tag {
+                display: inline-block;
+                font-size: 11px;
+                letter-spacing: 1.8px;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #2596be;
+                margin-bottom: 14px;
+            }
+
+            .bb-panel-text h3 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #1f2733;
+                margin-bottom: 14px;
+                line-height: 1.25;
+            }
+
+            .bb-panel-text p {
+                font-size: 14.5px;
+                line-height: 1.7;
+                color: #5c6c7a;
+                margin-bottom: 20px;
+            }
+
+            .bb-panel-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: #003d73;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 14px;
+                transition: gap .3s ease;
+            }
+
+            .bb-panel-link:hover {
+                gap: 14px;
+            }
+
+            .bb-panel-link svg {
+                width: 14px;
+                height: 14px;
+                stroke: #003d73;
+                fill: none;
+                stroke-width: 2;
+            }
+
+            .bb-future-footer {
+                text-align: center;
+                margin-top: 40px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-future-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 14px 34px;
+                background: #003d73;
+                color: #fff;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 14.5px;
+                transition: .3s;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-future-cta:hover {
+                background: #2596be;
+                transform: translateY(-2px);
+            }
+
+            .bb-future-cta svg {
+                width: 15px;
+                height: 15px;
+                stroke: #fff;
+                fill: none;
+                stroke-width: 2;
+                transition: transform .3s ease;
+            }
+
+            .bb-future-cta:hover svg {
+                transform: translateX(4px);
+            }
+
+            @media(max-width:850px) {
+                .bb-panel-card {
+                    grid-template-columns: 1fr;
+                }
+
+                .bb-panel-imgwrap {
+                    height: 220px;
+                }
+
+                .bb-panel-content {
+                    padding: 32px 28px;
+                }
+            }
+
+            @media(max-width:600px) {
+                .bb-future {
+                    padding: 40px 6%;
+                }
+
+                .bb-future-head h2 {
+                    font-size: 26px;
+                }
+
+                .bb-tabs {
+                    gap: 6px;
+                }
+
+                .bb-tab {
+                    padding: 9px 15px;
+                    font-size: 12.5px;
+                }
+
+                .bb-panel-text h3 {
+                    font-size: 20px;
+                }
+
+                .bb-panel-content {
+                    padding: 26px 22px;
+                }
+            }
+        </style>
+
+        <section class="bb-future" aria-label="Future Ready Learning and Innovation">
+
+            <div class="bb-future-head">
+                <span class="bb-future-eyebrow">Learning &amp; Innovation</span>
+                <h2>Future Ready. Future Focused.</h2>
+                <p>A curriculum built for the world students will inherit â€” AI, robotics, design thinking and
+                    guided career exploration alongside strong academic foundations.</p>
+            </div>
+
+            <div class="bb-future-wrap">
+
+                <div class="bb-tabs" id="bb-tabs">
+                    <button class="bb-tab bb-active" data-key="curriculum">Curriculum</button>
+                    <button class="bb-tab" data-key="ai">AI</button>
+                    <button class="bb-tab" data-key="robotics">Robotics</button>
+                    <button class="bb-tab" data-key="stem">STEM</button>
+                    <button class="bb-tab" data-key="design">Design Thinking</button>
+                    <button class="bb-tab" data-key="career">Career Guidance</button>
+                </div>
+
+                <div class="bb-panel-card">
+
+                    <div class="bb-panel-imgwrap">
+                        <img class="bb-panel-img bb-active" data-key="curriculum"
+                            src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/bcc5fd23-a3c5-48f0-bed8-f602df3688f0/image_2021-10-15_152937.png"
+                            alt="Curriculum at Bluebells">
+                        <img class="bb-panel-img" data-key="ai"
+                            src="https://i.postimg.cc/jSNr8yq8/image.png"
+                            alt="AI learning at Bluebells">
+                        <img class="bb-panel-img" data-key="robotics"
+                            src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062715185-SBRJZ8Z6CGF7WPEW2JMH/image_2021-01-02_003137.png?"
+                            alt="Robotics at Bluebells">
+                        <img class="bb-panel-img" data-key="stem"
+                            src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/cb4e547e-8b2b-4232-b3bd-3f45a6572c04/image_2021-10-15_152831.png"
+                            alt="STEM learning at Bluebells">
+                        <img class="bb-panel-img" data-key="design"
+                            src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/9b9b595f-3013-48d5-9fcb-5ea48b5c56c3/Screenshot+2024-11-30+at+11.55.24%E2%80%AFPM.png"
+                            alt="Design thinking at Bluebells">
+                        <img class="bb-panel-img" data-key="career"
+                            src="https://www.joonsquare.com/usermanage/image/business/bluebells-school-international-south-delhi-1484/bluebells-school-international-south-delhi-bbschool-02.jpg"
+                            alt="Career guidance at Bluebells">
+                    </div>
+
+                    <div class="bb-panel-content" id="bb-panel-content">
+
+                        <div class="bb-panel-text bb-active" data-key="curriculum">
+                            <span class="bb-panel-tag">Learning</span>
+                            <h3>A Curriculum Built to Last</h3>
+                            <p>A balanced academic framework that builds deep subject mastery while leaving room
+                                for curiosity, inquiry and real-world application.</p>
+                            <a href="/learning/curriculum" class="bb-panel-link">Explore the Curriculum
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="bb-panel-text" data-key="ai">
+                            <span class="bb-panel-tag">Learning</span>
+                            <h3>Artificial Intelligence</h3>
+                            <p>Students learn to use AI as a thinking partner â€” understanding how it works, where
+                                it helps, and where human judgement still matters most.</p>
+                            <a href="/learning/ai" class="bb-panel-link">See AI in the Classroom
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="bb-panel-text" data-key="robotics">
+                            <span class="bb-panel-tag">Learning</span>
+                            <h3>Robotics</h3>
+                            <p>Hands-on robotics labs turn abstract engineering concepts into something students
+                                can build, break, and rebuild.</p>
+                            <a href="/learning/robotics" class="bb-panel-link">Visit the Robotics Lab
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="bb-panel-text" data-key="stem">
+                            <span class="bb-panel-tag">Learning</span>
+                            <h3>STEM</h3>
+                            <p>Science, technology, engineering and maths taught as one connected discipline â€”
+                                solving problems the way real innovators do.</p>
+                            <a href="/learning/stem" class="bb-panel-link">Discover STEM at Bluebells
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="bb-panel-text" data-key="design">
+                            <span class="bb-panel-tag">Learning</span>
+                            <h3>Design Thinking</h3>
+                            <p>Empathy-led problem solving teaches students to understand a need before jumping
+                                to a solution â€” a skill that outlasts any single subject.</p>
+                            <a href="/learning/design-thinking" class="bb-panel-link">See Design Thinking in Action
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="bb-panel-text" data-key="career">
+                            <span class="bb-panel-tag">Learning</span>
+                            <h3>Career Guidance</h3>
+                            <p>Dedicated counsellors help students map their strengths to real pathways early â€”
+                                turning curiosity into a confident plan.</p>
+                            <a href="/learning/career-guidance" class="bb-panel-link">Explore Career Guidance
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="bb-future-footer">
+                <a href="/learning" class="bb-future-cta">
+                    Explore Learning
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                </a>
+            </div>
+
+        </section>
+
+        <script>
+            (function () {
+                const tabs = document.querySelectorAll('#bb-tabs .bb-tab');
+                const images = document.querySelectorAll('#bb-tabs ~ .bb-panel-card .bb-panel-img');
+                const texts = document.querySelectorAll('#bb-tabs ~ .bb-panel-card .bb-panel-text');
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const key = tab.getAttribute('data-key');
+
+                        tabs.forEach(t => t.classList.toggle('bb-active', t === tab));
+                        images.forEach(img => img.classList.toggle('bb-active', img.getAttribute('data-key') === key));
+                        texts.forEach(txt => txt.classList.toggle('bb-active', txt.getAttribute('data-key') === key));
+                    });
+                });
+            })();
+        </script>
+    </section>
+    
+<section id="6">
+        <style>
+            .bb-life {
+                background: #fdfaf4;
+                padding: 52px 0;
+                /* font-family: Inter, sans-serif; */
+                position: relative;
+                overflow: hidden;
+            }
+            .bb-life::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(circle, #003d73 1.2px, transparent 1.2px);
+                background-size: 28px 28px;
+                opacity: .09;
+                pointer-events: none;
+            }
+            .bb-life-decor {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                overflow: hidden;
+                pointer-events: none;
+            }
+            .bb-life-decor svg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .bb-life * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-life-head {
+                text-align: center;
+                max-width: 720px;
+                margin: 0 auto 50px;
+                padding: 0 8%;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-life-eyebrow {
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 600;
+                color: #2596be;
+                display: block;
+                margin-bottom: 18px;
+            }
+
+            .bb-life-head h2 {
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #1f2733;
+                margin-bottom: 16px;
+            }
+
+            .bb-life-head p {
+                font-size: 16.5px;
+                line-height: 1.7;
+                color: #5c6c7a;
+            }
+
+            .bb-life-nav {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+                max-width: 1280px;
+                margin: 0 auto 24px;
+                padding: 0 8%;
+            }
+
+            .bb-life-arrow {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 1.5px solid #d8dee6;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bb-life-arrow:hover {
+                background: #003d73;
+                border-color: #003d73;
+            }
+
+            .bb-life-arrow svg {
+                width: 18px;
+                height: 18px;
+                stroke: #1f2733;
+                fill: none;
+                stroke-width: 2;
+                transition: stroke .3s ease;
+            }
+
+            .bb-life-arrow:hover svg {
+                stroke: #fff;
+            }
+
+            .bb-life-arrow.bb-disabled {
+                opacity: .35;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            .bb-life-side-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 10;
+                background: rgba(255,255,255,.92);
+                border: 1px solid #d8dee6;
+                box-shadow: 0 2px 12px rgba(0,0,0,.10);
+            }
+
+            .bb-life-side-btn--prev { left: calc(8% - 24px); }
+            .bb-life-side-btn--next { right: calc(8% - 24px); }
+
+            @media(max-width:768px) {
+                .bb-life-side-btn--prev { left: 4px; }
+                .bb-life-side-btn--next { right: 4px; }
+            }
+
+            .bb-life-track-wrap {
+                position: relative;
+                padding: 0 8%;
+                z-index: 2;
+            }
+
+            .bb-life-track {
+                display: flex;
+                gap: 24px;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                padding-bottom: 8px;
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+
+            .bb-life-track::-webkit-scrollbar {
+                display: none;
+            }
+
+            .bb-life-card {
+                flex: 0 0 320px;
+                border-radius: 20px;
+                overflow: hidden;
+                text-decoration: none;
+                display: block;
+                background: #fff;
+                border: 1px solid #eceff3;
+                transition: transform .35s ease, box-shadow .35s ease;
+                scroll-snap-align: start;
+            }
+
+            .bb-life-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 24px 48px rgba(0, 30, 70, .12);
+            }
+
+            .bb-life-track {
+                scroll-snap-type: x mandatory;
+            }
+
+            .bb-life-imgwrap {
+                position: relative;
+                height: 200px;
+                overflow: hidden;
+            }
+
+            .bb-life-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform .6s ease;
+            }
+
+            .bb-life-card:hover .bb-life-img {
+                transform: scale(1.08);
+            }
+
+            .bb-life-icon-badge {
+                position: absolute;
+                bottom: -22px;
+                left: 24px;
+                width: 48px;
+                height: 48px;
+                border-radius: 14px;
+                background: #003d73;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 10px 20px rgba(0, 30, 70, .25);
+                z-index: 2;
+            }
+
+            .bb-life-icon-badge svg {
+                width: 22px;
+                height: 22px;
+                stroke: #fff;
+                fill: none;
+                stroke-width: 1.8;
+            }
+
+            .bb-life-body {
+                padding: 38px 24px 26px;
+            }
+
+            .bb-life-card h3 {
+                font-size: 20px;
+                font-weight: 700;
+                color: #1f2733;
+                margin-bottom: 8px;
+            }
+
+            .bb-life-card p {
+                font-size: 14.5px;
+                line-height: 1.6;
+                color: #5c6c7a;
+                margin-bottom: 16px;
+            }
+
+            .bb-life-link {
+                font-size: 14px;
+                font-weight: 600;
+                color: #003d73;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                transition: gap .3s ease;
+            }
+
+            .bb-life-card:hover .bb-life-link {
+                gap: 11px;
+            }
+
+            .bb-life-link svg {
+                width: 14px;
+                height: 14px;
+                stroke: #003d73;
+                fill: none;
+                stroke-width: 2;
+            }
+
+            .bb-life-dots {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-top: 36px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-life-dot {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: rgba(0,61,115,.2);
+                transition: .3s;
+            }
+
+            .bb-life-dot.bb-active {
+                background: #003d73;
+                width: 22px;
+                border-radius: 4px;
+            }
+
+            .bb-life-footer {
+                text-align: center;
+                margin-top: 44px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-life-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 16px 38px;
+                background: #003d73;
+                color: #fff;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 15px;
+                transition: .35s;
+            }
+
+            .bb-life-cta:hover {
+                background: #2596be;
+                transform: translateY(-3px);
+            }
+
+            .bb-life-cta svg {
+                width: 16px;
+                height: 16px;
+                stroke: #fff;
+                fill: none;
+                stroke-width: 2;
+                transition: transform .3s ease;
+            }
+
+            .bb-life-cta:hover svg {
+                transform: translateX(4px);
+            }
+
+            @media(max-width:768px) {
+                .bb-life-head h2 {
+                    font-size: 32px;
+                }
+
+                .bb-life-card {
+                    flex: 0 0 270px;
+                }
+
+                .bb-life-nav {
+                    display: none;
+                }
+            }
+
+            @media(max-width:480px) {
+                .bb-life {
+                    padding: 52px 0;
+                }
+
+                .bb-life-head {
+                    padding: 0 6%;
+                }
+
+                .bb-life-track-wrap {
+                    padding: 0 6%;
+                }
+
+                .bb-life-card {
+                    flex: 0 0 240px;
+                }
+            }
+        </style>
+
+        <section class="bb-life" aria-label="Student Life: Beyond the Classroom">
+
+            <div class="bb-life-decor">
+                <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <!-- top-left: stacked horizontal brush strokes -->
+                    <rect x="-10" y="60"  width="180" height="3"  rx="2" fill="#003d73" fill-opacity="0.07"/>
+                    <rect x="-10" y="80"  width="130" height="2"  rx="2" fill="#003d73" fill-opacity="0.05"/>
+                    <rect x="-10" y="97"  width="160" height="2"  rx="2" fill="#2596be" fill-opacity="0.06"/>
+                    <rect x="-10" y="112" width="100" height="1.5" rx="2" fill="#003d73" fill-opacity="0.04"/>
+                    <!-- top-right: small scattered squares -->
+                    <rect x="1260" y="30"  width="12" height="12" rx="2" fill="#f0c560" fill-opacity="0.22" transform="rotate(18,1266,36)"/>
+                    <rect x="1310" y="55"  width="8"  height="8"  rx="1" fill="#003d73" fill-opacity="0.14" transform="rotate(10,1314,59)"/>
+                    <rect x="1340" y="20"  width="16" height="16" rx="3" fill="#2596be" fill-opacity="0.10" transform="rotate(-12,1348,28)"/>
+                    <rect x="1280" y="80"  width="6"  height="6"  rx="1" fill="#f0c560" fill-opacity="0.18" transform="rotate(30,1283,83)"/>
+                    <!-- bottom-left: stacked horizontal brush strokes -->
+                    <rect x="-10" y="480" width="200" height="3"  rx="2" fill="#2596be" fill-opacity="0.07"/>
+                    <rect x="-10" y="500" width="140" height="2"  rx="2" fill="#003d73" fill-opacity="0.05"/>
+                    <rect x="-10" y="516" width="170" height="2"  rx="2" fill="#003d73" fill-opacity="0.05"/>
+                    <!-- bottom-right: small scattered squares -->
+                    <rect x="1240" y="500" width="14" height="14" rx="2" fill="#003d73" fill-opacity="0.10" transform="rotate(22,1247,507)"/>
+                    <rect x="1300" y="520" width="9"  height="9"  rx="1" fill="#f0c560" fill-opacity="0.18" transform="rotate(-8,1304,524)"/>
+                    <rect x="1350" y="490" width="18" height="18" rx="3" fill="#2596be" fill-opacity="0.08" transform="rotate(15,1359,499)"/>
+                    <!-- mid-left: single gold diamond -->
+                    <polygon points="30,290 38,302 30,314 22,302" fill="#f0c560" fill-opacity="0.22"/>
+                    <!-- mid-right: single gold diamond -->
+                    <polygon points="1370,280 1378,292 1370,304 1362,292" fill="#f0c560" fill-opacity="0.20"/>
+                    <!-- cross accents -->
+                    <line x1="220" y1="50"  x2="220" y2="66"  stroke="#003d73" stroke-opacity="0.13" stroke-width="1.5"/>
+                    <line x1="213" y1="58"  x2="227" y2="58"  stroke="#003d73" stroke-opacity="0.13" stroke-width="1.5"/>
+                    <line x1="1180" y1="460" x2="1180" y2="476" stroke="#2596be" stroke-opacity="0.14" stroke-width="1.5"/>
+                    <line x1="1173" y1="468" x2="1187" y2="468" stroke="#2596be" stroke-opacity="0.14" stroke-width="1.5"/>
+                </svg>
+            </div>
+
+            <div class="bb-life-head">
+                <span class="bb-life-eyebrow">Student Life</span>
+                <h2>Beyond the Classroom</h2>
+                <p>Growth at Bluebells doesn't stop when the bell rings. Sport, the arts, clubs, leadership, outreach
+                    and wellbeing all shape who our students become.</p>
+            </div>
+
+            <div class="bb-life-track-wrap">
+                <button class="bb-life-arrow bb-life-side-btn bb-life-side-btn--prev" id="bb-life-prev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="bb-life-arrow bb-life-side-btn bb-life-side-btn--next" id="bb-life-next" aria-label="Next">
+                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <div class="bb-life-track" id="bb-life-track">
+
+                    <a href="/student-life/sports" class="bb-life-card">
+                        <div class="bb-life-imgwrap">
+                            <img class="bb-life-img"
+                                src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/28b1dc55-8edc-4b1a-b57a-7f544db8a2f2/WhatsApp+Image+2024-10-19+at+4.38.00+PM+%281%29.jpeg"
+                                alt="Students playing sports">
+                            <div class="bb-life-icon-badge">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M12 3v18M3 12h18" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bb-life-body">
+                            <h3>Sports</h3>
+                            <p>Team and individual sports building discipline, fitness and the spirit of fair play.</p>
+                            <span class="bb-life-link">Explore Sports <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg></span>
+                        </div>
+                    </a>
+
+                    <a href="/student-life/arts-culture" class="bb-life-card">
+                        <div class="bb-life-imgwrap">
+                            <img class="bb-life-img"
+                                src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/cdb43e04-5cf2-4de2-acf7-16a858ac38d1/WhatsApp+Image+2024-10-19+at+4.06.21+PM.jpeg"
+                                alt="Students engaged in the arts">
+                            <div class="bb-life-icon-badge">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                                    <path d="M2 2l7.586 7.586" />
+                                    <circle cx="11" cy="11" r="2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bb-life-body">
+                            <h3>Arts</h3>
+                            <p>Music, dance, drama and visual art giving every student a stage to find their voice.</p>
+                            <span class="bb-life-link">Explore Arts <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg></span>
+                        </div>
+                    </a>
+
+                    <a href="/student-life/clubs" class="bb-life-card">
+                        <div class="bb-life-imgwrap">
+                            <img class="bb-life-img"
+                                src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/6934664d-5141-4825-862a-f802c5356ea5/image_2021-10-15_152851.png"
+                                alt="Students in a club activity">
+                            <div class="bb-life-icon-badge">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2" />
+                                    <circle cx="18" cy="9" r="3" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bb-life-body">
+                            <h3>Clubs</h3>
+                            <p>From debate to chess to coding, a wide spread of clubs lets every interest find a home.
+                            </p>
+                            <span class="bb-life-link">See All Clubs <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg></span>
+                        </div>
+                    </a>
+
+                    <a href="/student-life/leadership-service" class="bb-life-card">
+                        <div class="bb-life-imgwrap">
+                            <img class="bb-life-img"
+                                src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/80719ff1-2333-4cf1-bc21-68101ea20441/image_2021-10-15_152924.png"
+                                alt="Student leadership">
+                            <div class="bb-life-icon-badge">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.4 5.7 20.8 8 13.6l-6-4.4h7.6z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bb-life-body">
+                            <h3>Leadership</h3>
+                            <p>Student councils and peer mentoring programmes that build real responsibility, early.</p>
+                            <span class="bb-life-link">Learn More <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg></span>
+                        </div>
+                    </a>
+
+                    <a href="/student-life/outreach" class="bb-life-card">
+                        <div class="bb-life-imgwrap">
+                            <img class="bb-life-img"
+                                src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/e99f39b7-f7ab-4fc8-85eb-680d262b2993/WhatsApp+Image+2025-07-11+at+9.15.59+AM.jpeg"
+                                alt="Students doing community outreach">
+                            <div class="bb-life-icon-badge">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21l7.78-7.55 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bb-life-body">
+                            <h3>Outreach</h3>
+                            <p>Community service projects that turn compassion into consistent, meaningful action.</p>
+                            <span class="bb-life-link">See Outreach <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg></span>
+                        </div>
+                    </a>
+
+                    <a href="/student-life/wellbeing" class="bb-life-card">
+                        <div class="bb-life-imgwrap">
+                            <img class="bb-life-img"
+                                src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062746207-XAG13FZDDGB2K6KZFPLI/image_2021-01-05_202838+Cropped.png"
+                                alt="Students in a calm wellbeing environment">
+                            <div class="bb-life-icon-badge">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bb-life-body">
+                            <h3>Wellbeing</h3>
+                            <p>Dedicated counselling and mindfulness so every student feels seen, heard and supported.
+                            </p>
+                            <span class="bb-life-link">See Wellbeing <svg viewBox="0 0 24 24">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="bb-life-dots" id="bb-life-dots"></div>
+
+            <div class="bb-life-footer">
+                <a href="/student-life" class="bb-life-cta">
+                    Explore Student Life
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                </a>
+            </div>
+
+        </section>
+
+        <script>
+            (function () {
+                const track = document.getElementById('bb-life-track');
+                const prevBtn = document.getElementById('bb-life-prev');
+                const nextBtn = document.getElementById('bb-life-next');
+                const dotsWrap = document.getElementById('bb-life-dots');
+                const cards = track.querySelectorAll('.bb-life-card');
+
+                // build dots, one per card
+                cards.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.className = 'bb-life-dot' + (i === 0 ? ' bb-active' : '');
+                    dotsWrap.appendChild(dot);
+                });
+                const dotEls = dotsWrap.querySelectorAll('.bb-life-dot');
+
+                function cardStep() {
+                    const card = cards[0];
+                    const gap = 24;
+                    return card.getBoundingClientRect().width + gap;
+                }
+
+                function updateNav() {
+                    const maxScroll = track.scrollWidth - track.clientWidth - 4;
+                    prevBtn.classList.toggle('bb-disabled', track.scrollLeft <= 4);
+                    nextBtn.classList.toggle('bb-disabled', track.scrollLeft >= maxScroll);
+
+                    const activeIndex = Math.round(track.scrollLeft / cardStep());
+                    dotEls.forEach((dot, i) => dot.classList.toggle('bb-active', i === activeIndex));
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    track.scrollBy({ left: -cardStep(), behavior: 'smooth' });
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    track.scrollBy({ left: cardStep(), behavior: 'smooth' });
+                });
+
+                track.addEventListener('scroll', () => {
+                    window.requestAnimationFrame(updateNav);
+                });
+
+                dotEls.forEach((dot, i) => {
+                    dot.style.cursor = 'pointer';
+                    dot.addEventListener('click', () => {
+                        track.scrollTo({ left: i * cardStep(), behavior: 'smooth' });
+                    });
+                });
+
+                updateNav();
+                window.addEventListener('resize', updateNav);
+            })();
+        </script>
+    </section>
+
+    
+<section id="7">
+        <style>
+            .bb-global {
+                background: #03111f;
+                padding: 52px 8%;
+                /* font-family: Inter, sans-serif; */
+                position: relative;
+                overflow: hidden;
+            }
+            .bb-global::before {
+                content: '';
+                position: absolute;
+                inset: -16px;
+                background-image: url('https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/65cd9b6b-04c6-47e4-a518-8a7033316d79/6W7A8887.JPG');
+                background-size: cover;
+                background-position: center;
+                filter: blur(3px) brightness(.3) saturate(.55);
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            .bb-global * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-global-head {
+                text-align: center;
+                max-width: 680px;
+                margin: 0 auto 36px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-global-eyebrow {
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-size: 12.5px;
+                font-weight: 600;
+                color: #f0c560;
+                display: block;
+                margin-bottom: 12px;
+            }
+
+            .bb-global-head h2 {
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #fff;
+                margin-bottom: 14px;
+            }
+
+            .bb-global-head p {
+                font-size: 15.5px;
+                line-height: 1.65;
+                color: rgba(255,255,255,.72);
+            }
+
+            .bb-global-photostrip {
+                display: grid;
+                grid-template-columns: 1.3fr 1fr 1fr;
+                gap: 14px;
+                max-width: 1100px;
+                margin: 0 auto 40px;
+                position: relative;
+                z-index: 1;
+                height: 260px;
+            }
+
+            .bb-global-photostrip img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 14px;
+                display: block;
+            }
+
+            .bb-highlights {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 14px;
+                max-width: 1180px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-ghl-card {
+                background: #fff;
+                border: 1px solid #e4e8ee;
+                border-radius: 14px;
+                padding: 22px 16px;
+                text-align: center;
+                text-decoration: none;
+                transition: .3s;
+                box-shadow: 0 4px 14px rgba(0,30,70,.06);
+                position: relative;
+                z-index: 1;
+            }
+
+            .bb-ghl-card:hover {
+                border-color: #2596be;
+                box-shadow: 0 10px 28px rgba(0,30,70,.12);
+                transform: translateY(-4px);
+            }
+
+            .bb-ghl-icon {
+                width: 36px;
+                height: 36px;
+                margin: 0 auto 12px;
+                border-radius: 50%;
+                background: rgba(0,61,115,.08);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .bb-ghl-icon svg {
+                width: 17px;
+                height: 17px;
+                stroke: #003d73;
+                fill: none;
+                stroke-width: 1.8;
+            }
+
+            .bb-ghl-card h3 {
+                font-size: 14px;
+                font-weight: 700;
+                color: #1f2733;
+                margin-bottom: 6px;
+                line-height: 1.3;
+            }
+
+            .bb-ghl-card p {
+                font-size: 12px;
+                line-height: 1.5;
+                color: #5c6c7a;
+            }
+
+            .bb-global-footer {
+                text-align: center;
+                margin-top: 40px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-global-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 9px;
+                padding: 14px 32px;
+                background: rgba(255,255,255,.15);
+                border: 1.5px solid rgba(255,255,255,.5);
+                color: #fff;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 14px;
+                transition: .3s;
+                position: relative;
+                z-index: 1;
+            }
+
+            .bb-global-cta:hover {
+                background: #fff;
+                color: #003d73;
+                transform: translateY(-2px);
+            }
+
+            .bb-global-cta svg {
+                width: 15px;
+                height: 15px;
+                stroke: #fff;
+                fill: none;
+                stroke-width: 2;
+                transition: transform .3s ease;
+            }
+
+            .bb-global-cta:hover svg {
+                transform: translateX(4px);
+                stroke: #003d73;
+            }
+
+            @media(max-width:900px) {
+                .bb-highlights {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .bb-global-photostrip {
+                    height: auto;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 160px 160px;
+                }
+
+                .bb-global-photostrip a:first-child {
+                    grid-column: span 2;
+                }
+            }
+
+            @media(max-width:600px) {
+                .bb-global {
+                    padding: 40px 6%;
+                }
+
+                .bb-global-head h2 {
+                    font-size: 26px;
+                }
+
+                .bb-highlights {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                    margin-top: 0;
+                }
+
+                .bb-global-photostrip {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 140px 140px 140px;
+                    margin-bottom: 28px;
+                }
+
+                .bb-global-photostrip a:first-child {
+                    grid-column: span 1;
+                }
+            }
+        </style>
+
+        <section class="bb-global" aria-label="Global Perspectives and Global Learning">
+
+            <div class="bb-global-head">
+                <span class="bb-global-eyebrow">Global Learning</span>
+                <h2>Global Perspectives</h2>
+                <p>Bluebells connects classrooms across continents â€” building students who see the world as a
+                    community to belong to, not just a subject to study.</p>
+            </div>
+
+            <div class="bb-global-photostrip">
+                <a href="/global-learning/exchange">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/ac4c9e63-a700-4371-a286-79a1d35d51da/2.JPG?format=2500w%202500w"
+                        alt="Students on an international exchange programme">
+                </a>
+                <a href="/global-learning">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/5e350ee2-7007-47de-9f14-36d034420bf3/DSC_0333.JPG"
+                        alt="Students engaged in global citizenship learning">
+                </a>
+                <a href="/global-learning/languages">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062611481-EDV998S61GEZTL2NP0C6/image_2020-12-24_112538.png"
+                        alt="Students learning a foreign language together">
+                </a>
+            </div>
+
+            <div class="bb-highlights">
+
+                <a href="/global-learning/collaborations" class="bb-ghl-card">
+                    <div class="bb-ghl-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2" />
+                            <circle cx="18" cy="9" r="3" />
+                        </svg>
+                    </div>
+                    <h3>International Collaborations</h3>
+                    <p>Partnerships abroad bring fresh perspectives into everyday learning.</p>
+                </a>
+
+                <a href="/global-learning/exchange" class="bb-ghl-card">
+                    <div class="bb-ghl-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16v16H4z" stroke-linejoin="round" />
+                            <path d="M4 9h16M9 4v16" />
+                        </svg>
+                    </div>
+                    <h3>Exchange Programmes</h3>
+                    <p>Immersive travel that turns empathy into lived understanding.</p>
+                </a>
+
+                <a href="/global-learning" class="bb-ghl-card">
+                    <div class="bb-ghl-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18" />
+                        </svg>
+                    </div>
+                    <h3>Global Citizenship</h3>
+                    <p>Students learn to see themselves as one connected human family.</p>
+                </a>
+
+                <a href="/global-learning/sustainability" class="bb-ghl-card">
+                    <div class="bb-ghl-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22s8-4.5 8-12V5l-8-3-8 3v5c0 7.5 8 12 8 12z" />
+                        </svg>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Environmental stewardship woven into projects, year round.</p>
+                </a>
+
+                <a href="/global-learning/languages" class="bb-ghl-card">
+                    <div class="bb-ghl-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 8h14M5 8a9 9 0 1 0 9 13M8 4a14 14 0 0 1 0 16" />
+                        </svg>
+                    </div>
+                    <h3 id="bb-lang-rotate" style="transition: opacity .35s ease; min-height: 1.4em; color: #1f2733;">Foreign Languages</h3>
+                    <p>Six languages on offer, opening doors to new cultures.</p>
+                </a>
+                <style>
+                    #bb-lang-rotate { display: block; }
+                </style>
+                
+
+            </div>
+
+            <div class="bb-global-footer">
+                <a href="/global-learning" class="bb-global-cta">
+                    Explore Global Learning
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                </a>
+            </div>
+
+        </section>
+    </section>
+
+    <section id="8">
+        <style>
+            .bb-news {
+                background: #fdfaf4;
+                padding: 46px 6% 0;
+                /* font-family: Inter, sans-serif; */
+                position: relative;
+                overflow: hidden;
+            }
+            .bb-news::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(circle, #003d73 1px, transparent 1px);
+                background-size: 30px 30px;
+                opacity: .07;
+                pointer-events: none;
+            }
+            .bb-news-decor {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                overflow: hidden;
+                pointer-events: none;
+            }
+            .bb-news-decor svg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .bb-news * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-news-head {
+                text-align: center;
+                max-width: 680px;
+                margin: 0 auto 36px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .bb-news-eyebrow {
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-size: 12.5px;
+                font-weight: 600;
+                color: #2596be;
+                display: block;
+                margin-bottom: 12px;
+            }
+
+            .bb-news-head h2 {
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #1f2733;
+                margin-bottom: 14px;
+            }
+
+            .bb-news-head p {
+                font-size: 15.5px;
+                line-height: 1.65;
+                color: #5c6c7a;
+            }
+
+            .bb-news-filters {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                flex-wrap: wrap;
+                margin-bottom: 28px;
+            }
+
+            .bb-news-filter-btn {
+                padding: 9px 19px;
+                border-radius: 999px;
+                border: 1.5px solid #d9d7d3;
+                background: #fff;
+                color: #5c6c7a;
+                /* font-family: Inter, sans-serif; */
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: .3s;
+                white-space: nowrap;
+            }
+
+            .bb-news-filter-btn:hover {
+                border-color: #1f2733;
+                color: #1f2733;
+            }
+
+            .bb-news-filter-btn.bb-active {
+                background: #1f2733;
+                border-color: #1f2733;
+                color: #fff;
+            }
+
+            .bb-news-wrap {
+                max-width: 1220px;
+                margin: 0 auto;
+                padding-bottom: 70px;
+            }
+
+            .bb-news-row-top {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 22px;
+                margin-bottom: 22px;
+            }
+
+            .bb-news-row-bottom {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 22px;
+            }
+
+            .bb-news-feature {
+                position: relative;
+                border-radius: 6px;
+                overflow: hidden;
+                text-decoration: none;
+                display: block;
+                height: 280px;
+            }
+
+            .bb-news-feature img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform .9s ease;
+            }
+
+            .bb-news-feature:hover img {
+                transform: scale(1.05);
+            }
+
+            .bb-news-feature:after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .78) 100%);
+            }
+
+            .bb-news-feature-body {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 24px 28px;
+                z-index: 2;
+                color: #fff;
+            }
+
+            .bb-news-feature-date {
+                font-size: 11.5px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                font-weight: 700;
+                opacity: .9;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .bb-news-feature-body h3 {
+                /* font-family: Georgia, 'Times New Roman', serif; */
+                font-size: 23px;
+                font-weight: 700;
+                line-height: 1.35;
+                color: #fff;
+            }
+
+            .bb-news-card {
+                text-decoration: none;
+                display: block;
+                background: #fff;
+                border-radius: 6px;
+                overflow: hidden;
+                transition: transform .3s ease, box-shadow .3s ease;
+            }
+
+            .bb-news-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 16px 32px rgba(0, 0, 0, .1);
+            }
+
+            .bb-news-card-imgwrap {
+                height: 200px;
+                overflow: hidden;
+            }
+
+            .bb-news-card-imgwrap img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform .7s ease;
+            }
+
+            .bb-news-card:hover .bb-news-card-imgwrap img {
+                transform: scale(1.06);
+            }
+
+            .bb-news-card-body {
+                padding: 18px 4px 6px;
+            }
+
+            .bb-news-card-tag {
+                display: block;
+                font-size: 11px;
+                letter-spacing: 1.3px;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #003d73;
+                margin-bottom: 10px;
+            }
+
+            .bb-news-card h4 {
+                /* font-family: Georgia, 'Times New Roman', serif; */
+                font-size: 18px;
+                font-weight: 700;
+                color: #1f2733;
+                line-height: 1.4;
+            }
+
+            .bb-news-card.bb-hidden,
+            .bb-news-feature.bb-hidden {
+                display: none;
+            }
+
+            @media(max-width:880px) {
+                .bb-news-row-top {
+                    grid-template-columns: 1fr;
+                }
+
+                .bb-news-row-bottom {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            @media(max-width:600px) {
+                .bb-news {
+                    padding: 48px 6% 0;
+                }
+
+                .bb-news-head h2 {
+                    font-size: 28px;
+                }
+
+                .bb-news-feature {
+                    height: 240px;
+                }
+            }
+        </style>
+
+        <section class="bb-news" aria-label="School News from Bluebells">
+
+            <div class="bb-news-decor">
+                <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <!-- large arc sweeping from top-left corner -->
+                    <circle cx="0" cy="0" r="320" fill="none" stroke="#003d73" stroke-opacity="0.08" stroke-width="1.5"/>
+                    <circle cx="0" cy="0" r="480" fill="none" stroke="#f0c560" stroke-opacity="0.10" stroke-width="1.5"/>
+                    <circle cx="0" cy="0" r="640" fill="none" stroke="#003d73" stroke-opacity="0.06" stroke-width="1"/>
+                    <!-- arc sweep from bottom-right -->
+                    <circle cx="1200" cy="700" r="360" fill="none" stroke="#f0c560" stroke-opacity="0.09" stroke-width="1.5"/>
+                    <circle cx="1200" cy="700" r="520" fill="none" stroke="#003d73" stroke-opacity="0.07" stroke-width="1"/>
+                    <!-- gold diamond accents top-right cluster -->
+                    <polygon points="1080,38 1086,50 1080,62 1074,50" fill="#f0c560" fill-opacity="0.28"/>
+                    <polygon points="1120,22 1124,31 1120,40 1116,31" fill="#f0c560" fill-opacity="0.18"/>
+                    <polygon points="1150,55 1155,65 1150,75 1145,65" fill="#f0c560" fill-opacity="0.20"/>
+                    <!-- navy cross accents -->
+                    <line x1="920" y1="44" x2="920" y2="60" stroke="#003d73" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <line x1="913" y1="52" x2="927" y2="52" stroke="#003d73" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <line x1="280" y1="620" x2="280" y2="636" stroke="#003d73" stroke-opacity="0.15" stroke-width="1.5"/>
+                    <line x1="273" y1="628" x2="287" y2="628" stroke="#003d73" stroke-opacity="0.15" stroke-width="1.5"/>
+                    <!-- bottom-left brushstroke lines -->
+                    <rect x="-10" y="580" width="220" height="3" rx="2" fill="#003d73" fill-opacity="0.07"/>
+                    <rect x="-10" y="600" width="160" height="2" rx="2" fill="#2596be" fill-opacity="0.06"/>
+                    <rect x="-10" y="616" width="190" height="2" rx="2" fill="#003d73" fill-opacity="0.05"/>
+                    <!-- top-right brushstroke lines -->
+                    <rect x="1010" y="30" width="200" height="3" rx="2" fill="#003d73" fill-opacity="0.07"/>
+                    <rect x="1050" y="48" width="150" height="2" rx="2" fill="#2596be" fill-opacity="0.05"/>
+                </svg>
+            </div>
+
+            <div class="bb-news-head">
+                <span class="bb-news-eyebrow">Latest from Bluebells</span>
+                <h2>School News</h2>
+                <p>Stories about events, achievements, and initiatives at Bluebells School International.</p>
+            </div>
+
+            <div class="bb-news-filters" id="bb-news-filters">
+                <button class="bb-news-filter-btn bb-active" data-filter="all">All</button>
+                <button class="bb-news-filter-btn" data-filter="events">Events</button>
+                <button class="bb-news-filter-btn" data-filter="achievements">Achievements</button>
+                <button class="bb-news-filter-btn" data-filter="outreach">Outreach</button>
+            </div>
+
+            <div class="bb-news-wrap">
+
+                <div class="bb-news-row-top">
+
+                    <a href="/news-events/celebration-human-spirit" class="bb-news-feature" data-cat="events">
+                        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/ac4c9e63-a700-4371-a286-79a1d35d51da/2.JPG?format=2500w%202500w"
+                            alt="School assembly celebration">
+                        <div class="bb-news-feature-body">
+                            <span class="bb-news-feature-date">July 17th, 2025</span>
+                            <h3>Celebration of the Human Spirit<br>Dr. Nelson Mandela</h3>
+                        </div>
+                    </a>
+
+                    <a href="/news-events/pushkin-day" class="bb-news-feature" data-cat="events">
+                        <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/5e350ee2-7007-47de-9f14-36d034420bf3/DSC_0333.JPG"
+                            alt="Students performing a cultural dance">
+                        <div class="bb-news-feature-body">
+                            <span class="bb-news-feature-date">April 16th, 2025</span>
+                            <h3>Pushkin Day Celebrations</h3>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="bb-news-row-bottom">
+
+                    <a href="/news-events/aarini-lahoty-fide" class="bb-news-card" data-cat="achievements">
+                        <div class="bb-news-card-imgwrap">
+                            <img src="https://thecsrjournal.in/wp-content/uploads/2025/08/Aarini-Lahoty-Youngest-FIDE-Rating-Achiever.webp"
+                                alt="Young chess player">
+                        </div>
+                        <div class="bb-news-card-body">
+                            <span class="bb-news-card-tag">Strategic Mind, Scholarly Spirit</span>
+                            <h4>Aarini Lahoty becomes the youngest FIDE-rated chess player in India</h4>
+                        </div>
+                    </a>
+
+                    <a href="/news-events/baaqir-ycc-photography" class="bb-news-card" data-cat="achievements">
+                        <div class="bb-news-card-imgwrap">
+                            <img src="https://i.postimg.cc/8P2zdm68/image.png"
+                                alt="Student receiving an award certificate">
+                        </div>
+                        <div class="bb-news-card-body">
+                            <span class="bb-news-card-tag">Creative Eye, Artistic Vision</span>
+                            <h4>Baaqir Mehmood Khan wins the YCC Photography Competition</h4>
+                        </div>
+                    </a>
+
+                    <a href="/news-events/compassion-in-action" class="bb-news-card" data-cat="outreach">
+                        <div class="bb-news-card-imgwrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/e99f39b7-f7ab-4fc8-85eb-680d262b2993/WhatsApp+Image+2025-07-11+at+9.15.59+AM.jpeg"
+                                alt="Student council workshop on compassion">
+                        </div>
+                        <div class="bb-news-card-body">
+                            <span class="bb-news-card-tag">Cultivating Compassion</span>
+                            <h4>Student Council joins Compassion in Action workshop honoring Dalai Lama</h4>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <script>
+            (function () {
+                const filters = document.querySelectorAll('#bb-news-filters .bb-news-filter-btn');
+                const items = document.querySelectorAll('.bb-news [data-cat]');
+
+                filters.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const filter = btn.getAttribute('data-filter');
+
+                        filters.forEach(b => b.classList.toggle('bb-active', b === btn));
+
+                        items.forEach(item => {
+                            const show = filter === 'all' || item.getAttribute('data-cat') === filter;
+                            item.classList.toggle('bb-hidden', !show);
+                        });
+                    });
+                });
+            })();
+        </script>
+    </section>
+    
+
+
+
+<section id="10">
+    <style>
+        .bb-history {
+            background: #fdfaf4;
+            padding: 40px 8% 36px;
+            position: relative;
+            overflow: hidden;
+        }
+        .bb-history::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, #003d73 1px, transparent 1px);
+            background-size: 28px 28px;
+            opacity: .07;
+            pointer-events: none;
+        }
+        .bb-history__head {
+            text-align: center;
+            margin-bottom: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .bb-history__eyebrow {
+            display: block;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #003d73;
+            margin-bottom: 10px;
+        }
+        .bb-history__head h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2733;
+            margin: 0;
+        }
+
+        /* Layout: timeline left, image right */
+        .bb-history__body {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 0 48px;
+            max-width: 900px;
+            margin: 0 auto;
+            align-items: stretch;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Vertical timeline */
+        .bb-history__timeline {
+            position: relative;
+            padding-left: 26px;
+            display: flex;
+            flex-direction: column;
+        }
+        .bb-history__timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: rgba(0,61,115,.15);
+        }
+        .bb-history__year {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 14px;
+            padding: 0;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: inherit;
+            width: 100%;
+            text-align: left;
+        }
+        .bb-history__year::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #e4e8ee;
+            border: 2px solid #c5cdd8;
+            transition: background .25s, border-color .25s, transform .25s;
+            flex-shrink: 0;
+        }
+        .bb-history__year.is-active::before {
+            background: #003d73;
+            border-color: #003d73;
+            transform: scale(1.25);
+        }
+        .bb-history__year-label {
+            font-size: 19px;
+            font-weight: 700;
+            color: #9aa8ba;
+            transition: color .25s;
+            letter-spacing: .5px;
+        }
+        .bb-history__year.is-active .bb-history__year-label {
+            color: #003d73;
+        }
+        .bb-history__year:hover .bb-history__year-label {
+            color: #1f2733;
+        }
+
+        /* Image panel */
+        .bb-history__panel {
+            display: flex;
+            align-items: flex-start;
+        }
+        .bb-history__img-wrap {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 12px 36px rgba(0,30,70,.13);
+            background: #e4e8ee;
+            max-width: 420px;
+        }
+        .bb-history__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0;
+            transition: opacity .45s ease;
+        }
+        .bb-history__img.is-active {
+            position: relative;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .bb-history { padding: 32px 6% 28px; }
+            .bb-history__body {
+                grid-template-columns: 1fr;
+                gap: 24px 0;
+            }
+            .bb-history__panel { position: static; }
+            .bb-history__head h2 { font-size: 22px; }
+            .bb-history__head { margin-bottom: 20px; }
+            .bb-history__timeline { display: flex; flex-wrap: wrap; gap: 8px; padding-left: 0; }
+            .bb-history__timeline::before { display: none; }
+            .bb-history__year { padding: 6px 16px; border-radius: 999px; border: 1.5px solid #c5cdd8; width: auto; }
+            .bb-history__year::before { display: none; }
+            .bb-history__year.is-active { border-color: #003d73; background: rgba(0,61,115,.07); }
+            .bb-history__year-label { font-size: 14px; }
+        }
+    </style>
+
+    <div class="bb-history" id="bb-history">
+        <div class="bb-history__head">
+            <span class="bb-history__eyebrow">Since 1957</span>
+            <h2>Our History</h2>
+        </div>
+
+        <div class="bb-history__body">
+            <!-- Timeline -->
+            <div class="bb-history__timeline" id="bb-history-timeline">
+                <button class="bb-history__year is-active" data-idx="0" type="button">
+                    <span class="bb-history__year-label">1957</span>
+                </button>
+                <button class="bb-history__year" data-idx="1" type="button">
+                    <span class="bb-history__year-label">1967</span>
+                </button>
+                <button class="bb-history__year" data-idx="2" type="button">
+                    <span class="bb-history__year-label">1977</span>
+                </button>
+                <button class="bb-history__year" data-idx="3" type="button">
+                    <span class="bb-history__year-label">1987</span>
+                </button>
+                <button class="bb-history__year" data-idx="4" type="button">
+                    <span class="bb-history__year-label">1997</span>
+                </button>
+                <button class="bb-history__year" data-idx="5" type="button">
+                    <span class="bb-history__year-label">2007</span>
+                </button>
+                <button class="bb-history__year" data-idx="6" type="button">
+                    <span class="bb-history__year-label">2017</span>
+                </button>
+            </div>
+
+            <!-- Image panel -->
+            <div class="bb-history__panel">
+                <div class="bb-history__img-wrap">
+                    <img class="bb-history__img is-active" src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062641859-BLFUDZB7R7F0CEPIOWP4/1.png?format=1000w" alt="History 1957">
+                    <img class="bb-history__img" src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062641847-4MGP67LC07BAQMT3VOMO/2+%281%29+copy.png?format=1000w" alt="History 1967">
+                    <img class="bb-history__img" src="https://i.postimg.cc/RVt27fty/image.png" alt="History 1977">
+                    <img class="bb-history__img" src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062641872-6JWG7M37IWHJQ92AI990/222.png?format=1000w" alt="History 1987">
+                    <img class="bb-history__img" src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062641851-1J1A6FEOB745LSH6DIIG/5%2Bcopy+copy.png?format=1000w" alt="History 1997">
+                    <img class="bb-history__img" src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062641855-98V22G6I5X3LI1MPOQT2/6+copy.png?format=1000w" alt="History 2007">
+                    <img class="bb-history__img" src="https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062641842-WIJKFQXOG6YT26KAIVIY/7%2Bcopy+copy.png?format=750w" alt="History 2017">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        var years = document.querySelectorAll('#bb-history-timeline .bb-history__year');
+        var imgs = document.querySelectorAll('#bb-history .bb-history__img');
+        var active = 0;
+
+        function goTo(idx) {
+            years[active].classList.remove('is-active');
+            imgs[active].classList.remove('is-active');
+            active = idx;
+            years[active].classList.add('is-active');
+            imgs[active].classList.add('is-active');
+        }
+
+        years.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                goTo(parseInt(btn.getAttribute('data-idx'), 10));
+            });
+        });
+    })();
+    </script>
+</section>
+
+<section id="11">
+    <style>
+        .bb-alumni {
+            background: #03111f;
+            padding: 52px 8%;
+            position: relative;
+            overflow: hidden;
+        }
+        .bb-alumni::before {
+            content: '';
+            position: absolute;
+            inset: -16px;
+            background-image: url('https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/aedbd0b8-ffb3-4fcf-a53f-4dfceedb7b89/260A5295.JPG');
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px) brightness(.2) saturate(.4);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .bb-alumni__head {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .bb-alumni__eyebrow {
+            display: block;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #f0c560;
+            margin-bottom: 12px;
+        }
+        .bb-alumni__head h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+        .bb-alumni__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .bb-alumni-card {
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+        }
+        .bb-alumni-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 48px rgba(0,0,0,.4);
+            border-color: rgba(240,197,96,.35);
+        }
+        .bb-alumni-card__image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+        }
+        .bb-alumni-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform .5s ease;
+            display: block;
+        }
+        .bb-alumni-card:hover .bb-alumni-card__image img {
+            transform: scale(1.05);
+        }
+        .bb-alumni-card__body {
+            padding: 20px;
+        }
+        .bb-alumni-card__body h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 8px;
+        }
+        .bb-alumni-card__body p {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: rgba(255,255,255,.65);
+            margin: 0;
+            white-space: pre-line;
+        }
+        @media (max-width: 1000px) {
+            .bb-alumni__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 560px) {
+            .bb-alumni { padding: 40px 6%; }
+            .bb-alumni__grid { grid-template-columns: 1fr; gap: 16px; }
+            .bb-alumni-card__image { aspect-ratio: 4/3; }
+        }
+    </style>
+
+    <section class="bb-alumni" aria-label="Our Alumni">
+        <div class="bb-alumni__head">
+            <span class="bb-alumni__eyebrow">Bluebells Proud</span>
+            <h2>Our Alumni</h2>
+        </div>
+        <div class="bb-alumni__grid">
+            <div class="bb-alumni-card">
+                <div class="bb-alumni-card__image">
+                    <img src="https://images.indianexpress.com/2024/03/MixCollage-07-Mar-2024-04-00-PM-5711.jpg" alt="Guneet Monga" loading="lazy">
+                </div>
+                <div class="bb-alumni-card__body">
+                    <h3>Guneet Monga</h3>
+                    <p>Producer of the 2023 Academy Award-winning documentary short film "The Elephant Whisperers"
+(2000â€“2001)</p>
+                </div>
+            </div>
+            <div class="bb-alumni-card">
+                <div class="bb-alumni-card__image">
+                    <img src="https://th-i.thgim.com/public/incoming/rmbogt/article66515826.ece/alternates/FREE_1200/95th_Academy_Awards_Nominees_Luncheon_-_Portraits_84136.jpg" alt="Shaunak Sen" loading="lazy">
+                </div>
+                <div class="bb-alumni-card__body">
+                    <h3>Shaunak Sen</h3>
+                    <p>Academy Awardâ€“nominated filmmaker whose documentary "All That Breathes" won top honors at Cannes in 2022.
+(2004â€“2005)</p>
+                </div>
+            </div>
+            <div class="bb-alumni-card">
+                <div class="bb-alumni-card__image">
+                    <img src="https://fedscoop.com/wp-content/uploads/sites/5/2025/07/200708-D-BN624-0029.jpeg?w=1013" alt="Nand Mulchandani" loading="lazy">
+                </div>
+                <div class="bb-alumni-card__body">
+                    <h3>Nand Mulchandani</h3>
+                    <p>First Indian to be appointed as CTO at the CIA (Central Intelligence Agency) USA.
+(1979â€“1987)</p>
+                </div>
+            </div>
+            <div class="bb-alumni-card">
+                <div class="bb-alumni-card__image">
+                    <img src="https://fsia.in/upload_pic/1661266279IMG-20220823-WA0009.jpg" alt="Dr. Sayantani Bhattacharjee" loading="lazy">
+                </div>
+                <div class="bb-alumni-card__body">
+                    <h3>Dr. Sayantani Bhattacharjee</h3>
+                    <p>A healthcare innovator and founder of Better Life Medical Centre, dedicated to delivering affordable & quality care.
+(1999â€“2000)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+<section id="gallery">
+    <style>
+        .bb-gal { background: #111; }
+        .bb-gal * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .bb-gal-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(3, 150px);
+            gap: 2px;
+        }
+        .bb-gal-cell {
+            overflow: hidden; cursor: pointer;
+            border: none; padding: 0; background: #222; display: block;
+            transition: opacity .25s, box-shadow .25s;
+        }
+        .bb-gal-cell img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            transition: transform .45s;
+        }
+        /* when grid is hovered, dim all cells */
+        .bb-gal-grid:hover .bb-gal-cell { opacity: .45; }
+        /* hovered cell: full brightness + glow */
+        .bb-gal-grid:hover .bb-gal-cell:hover {
+            opacity: 1;
+            box-shadow: 0 0 0 2px #fff, 0 0 18px 4px rgba(255,255,255,.35);
+            z-index: 1; position: relative;
+        }
+        .bb-gal-grid:hover .bb-gal-cell:hover img { transform: scale(1.07); }
+
+        /* fullscreen lightbox */
+        .bb-gal-lb {
+            display: none; position: fixed; inset: 0; z-index: 9999;
+            background: rgba(0,0,0,.92); align-items: center; justify-content: center;
+            cursor: zoom-out;
+        }
+        .bb-gal-lb.bb-open { display: flex; }
+        .bb-gal-lb img {
+            max-width: 92vw; max-height: 90vh;
+            object-fit: contain; display: block;
+            box-shadow: 0 8px 60px rgba(0,0,0,.8);
+            border-radius: 2px;
+            cursor: default;
+        }
+        .bb-gal-lb-close {
+            position: fixed; top: 20px; right: 24px;
+            background: none; border: none; color: #fff;
+            font-size: 28px; cursor: pointer; opacity: .7;
+            transition: opacity .2s; line-height: 1;
+        }
+        .bb-gal-lb-close:hover { opacity: 1; }
+
+        @media(max-width:900px) {
+            .bb-gal-grid { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(6, 130px); }
+        }
+        @media(max-width:560px) {
+            .bb-gal-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(8, 100px); }
+        }
+    </style>
+
+    <div class="bb-gal">
+        <div class="bb-gal-grid" id="bb-gal-grid"></div>
+    </div>
+
+    <!-- lightbox -->
+    <div class="bb-gal-lb" id="bb-gal-lb">
+        <button class="bb-gal-lb-close" id="bb-gal-lb-close" aria-label="Close">&times;</button>
+        <img id="bb-gal-lb-img" src="" alt="">
+    </div>
+
+    <script>
+        (function () {
+            var IMGS = [
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/af2c45e7-73b9-47c6-be54-66053d2ff68b/IMG_0209.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/d829181f-165e-4c69-abc6-b7260893aa9b/260A5270.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/aedbd0b8-ffb3-4fcf-a53f-4dfceedb7b89/260A5295.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/87ebaa78-cfcb-4bd3-b4d2-15e9b81d544c/3A.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/65cd9b6b-04c6-47e4-a518-8a7033316d79/6W7A8887.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/5e350ee2-7007-47de-9f14-36d034420bf3/DSC_0333.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/6aa01b20-c3f2-4109-a20a-93f4a990f2c4/_22A7201.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/16e31813-df76-4411-a1f2-bdb9f75930c8/_22A6767.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/8789cb50-46b9-4944-a3fc-59be2ad6b0fc/148A0336.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/7056dd20-c3e6-46d0-b702-7475b0e59efe/IMG_7502.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1518dfe5-2b56-46aa-a833-105680693084/EJ2A8432.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/239832b5-8602-4588-b8ea-cdd1c3dbffe1/IMAG3077.jpg",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/fabbf54b-b4cc-4c1f-bb73-753b25f04378/_22A4004+%281%29.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/c4ee51ab-9363-4c67-b466-dcf297aa206f/image_2021-10-15_152822.png",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/bcc5fd23-a3c5-48f0-bed8-f602df3688f0/image_2021-10-15_152937.png",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/cb4e547e-8b2b-4232-b3bd-3f45a6572c04/image_2021-10-15_152831.png",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/28b1dc55-8edc-4b1a-b57a-7f544db8a2f2/WhatsApp+Image+2024-10-19+at+4.38.00+PM+%281%29.jpeg",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/cdb43e04-5cf2-4de2-acf7-16a858ac38d1/WhatsApp+Image+2024-10-19+at+4.06.21+PM.jpeg",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/9b9b595f-3013-48d5-9fcb-5ea48b5c56c3/Screenshot+2024-11-30+at+11.55.24%E2%80%AFPM.png",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/e99f39b7-f7ab-4fc8-85eb-680d262b2993/WhatsApp+Image+2025-07-11+at+9.15.59+AM.jpeg",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/ac4c9e63-a700-4371-a286-79a1d35d51da/2.JPG",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/6934664d-5141-4825-862a-f802c5356ea5/image_2021-10-15_152851.png",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/80719ff1-2333-4cf1-bc21-68101ea20441/image_2021-10-15_152924.png",
+                "https://images.squarespace-cdn.com/content/v1/6006dd43893bc73c30c23d0d/1611062746207-XAG13FZDDGB2K6KZFPLI/image_2021-01-05_202838+Cropped.png"
+            ];
+
+            var grid = document.getElementById('bb-gal-grid');
+            var lb = document.getElementById('bb-gal-lb');
+            var lbImg = document.getElementById('bb-gal-lb-img');
+            var lbClose = document.getElementById('bb-gal-lb-close');
+
+            IMGS.forEach(function(src, i) {
+                var btn = document.createElement('button');
+                btn.className = 'bb-gal-cell';
+                var img = document.createElement('img');
+                img.src = src; img.alt = ''; img.loading = 'lazy';
+                btn.appendChild(img);
+                btn.addEventListener('click', function() {
+                    lbImg.src = src;
+                    lb.classList.add('bb-open');
+                    document.body.style.overflow = 'hidden';
+                });
+                grid.appendChild(btn);
+            });
+
+            function closeLb() {
+                lb.classList.remove('bb-open');
+                document.body.style.overflow = '';
+            }
+
+            lbClose.addEventListener('click', closeLb);
+            lb.addEventListener('click', function(e) {
+                if (e.target === lb) closeLb();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeLb();
+            });
+        })();
+    </script>
+</section>
+
+<section id="partners">
+    <style>
+        .bb-partners { background: #fdfaf4; padding: 52px 0 48px; }
+        .bb-partners * { margin: 0; padding: 0; box-sizing: border-box; }
+        .bb-partners-head { text-align: center; margin-bottom: 36px; padding: 0 8%; }
+        .bb-partners-eyebrow {
+            letter-spacing: 3px; text-transform: uppercase;
+            font-size: 12.5px; font-weight: 600; color: #003d73;
+            display: block; margin-bottom: 10px;
+        }
+        .bb-partners-head h2 { font-size: 30px; font-weight: 700; color: #1f2733; }
+        .bb-partners-track-wrap { overflow: hidden; position: relative; }
+        .bb-partners-track-wrap::before,
+        .bb-partners-track-wrap::after {
+            content: ''; position: absolute; top: 0; bottom: 0;
+            width: 100px; z-index: 2; pointer-events: none;
+        }
+        .bb-partners-track-wrap::before { left: 0; background: linear-gradient(to right, #fdfaf4, transparent); }
+        .bb-partners-track-wrap::after  { right: 0; background: linear-gradient(to left, #fdfaf4, transparent); }
+        .bb-partners-row {
+            display: flex; gap: 12px; align-items: stretch;
+            animation: bbPartnerScroll 30s linear infinite;
+            width: max-content;
+        }
+        .bb-partners-row:hover { animation-play-state: paused; }
+        @keyframes bbPartnerScroll {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+        .bb-partner-card {
+            flex-shrink: 0; width: 220px; height: 110px;
+            background: #fff; border-right: 1px solid #ece8de;
+            display: flex; align-items: center; justify-content: center;
+            padding: 18px 24px;
+            transition: background .3s, transform .3s;
+        }
+        .bb-partner-card:hover { background: #f0f4f8; }
+        .bb-partner-card img {
+            max-width: 100%; max-height: 68px; object-fit: contain;
+            filter: grayscale(1); opacity: .6;
+            transition: filter .3s, opacity .3s;
+        }
+        .bb-partner-card:hover img { filter: grayscale(0); opacity: 1; }
+        .bb-partners-cta { text-align: center; margin-top: 32px; }
+        .bb-partners-cta a {
+            display: inline-block; padding: 12px 30px;
+            border: 2px solid #003d73; border-radius: 999px;
+            color: #003d73; text-decoration: none;
+            font-weight: 600; font-size: 14px; transition: .3s;
+        }
+        .bb-partners-cta a:hover { background: #003d73; color: #fff; transform: translateY(-2px); }
+    </style>
+
+    <div class="bb-partners">
+        <div class="bb-partners-head">
+            <span class="bb-partners-eyebrow">Trusted By</span>
+            <h2>Partnerships &amp; Accreditations</h2>
+        </div>
+        <div class="bb-partners-track-wrap">
+            <div class="bb-partners-row" id="bb-partners-row"></div>
+        </div>
+        <div class="bb-partners-cta"><a href="/about-us/partnerships">Learn More</a></div>
+    </div>
+
+    <script>
+        (function () {
+            var LOGOS = [
+                { src: "https://upload.wikimedia.org/wikipedia/commons/e/e3/BritishCouncil_Logo.png", alt: "British Council" },
+                { src: "https://www.auslandsschulwesen.de/SharedDocs/Bilder/DE/Logos/Logo_PASCH.jpg?__blob=wide&v=1", alt: "PASCH" },
+                { src: "https://i.postimg.cc/MTQbCZ4m/image.png", alt: "Eco Ambassador" },
+                { src: "https://teresas.ac.in/wp-content/uploads/2019/07/wiscomp-logo.png", alt: "WISCOMP" },
+                { src: "https://www.microsoft.com/en-us/education/blog/wp-content/uploads/2020/09/Showcase-Schools-badge1.jpg", alt: "Microsoft Showcase Schools" },
+                { src: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Ritsumeikan_Asia_Pacific_University_logo.svg", alt: "Ritsumeikan Asia Pacific University" }
+            ];
+            var all = LOGOS.concat(LOGOS);
+            var row = document.getElementById('bb-partners-row');
+            all.forEach(function(logo) {
+                var card = document.createElement('div');
+                card.className = 'bb-partner-card';
+                var img = document.createElement('img');
+                img.src = logo.src; img.alt = logo.alt; img.loading = 'lazy';
+                card.appendChild(img);
+                row.appendChild(card);
+            });
+        })();
+    </script>
+</section>
+
+<section id="9">
+        <style>
+            .bb-team {
+                background: #001f4d;
+                padding: 46px 8%;
+                /* font-family: Inter, sans-serif; */
+                position: relative;
+                overflow: hidden;
+            }
+            .bb-team::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image:
+                    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+                background-size: 48px 48px;
+                pointer-events: none;
+            }
+            .bb-team-decor {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                overflow: hidden;
+                pointer-events: none;
+            }
+            .bb-team-decor svg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .bb-team * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .bb-team-head {
+                text-align: center;
+                max-width: 540px;
+                margin: 0 auto 36px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-team-eyebrow {
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                font-size: 11.5px;
+                font-weight: 600;
+                color: #6fc3df;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .bb-team-head h2 {
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 1.25;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+
+            .bb-team-head p {
+                font-size: 14px;
+                line-height: 1.6;
+                color: #8d9bb0;
+            }
+
+            .bb-timeline-wrap {
+                max-width: 420px;
+                margin: 0 auto 44px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-timeline {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                padding: 0 4px;
+            }
+
+            .bb-timeline-line {
+                position: absolute;
+                left: 18px;
+                right: 18px;
+                top: 7px;
+                height: 1.5px;
+                background: rgba(255, 255, 255, .12);
+                z-index: 0;
+            }
+
+            .bb-timeline-progress {
+                position: absolute;
+                left: 18px;
+                top: 7px;
+                height: 1.5px;
+                background: #6fc3df;
+                z-index: 1;
+                transition: width .4s ease;
+            }
+
+            .bb-year-btn {
+                position: relative;
+                z-index: 2;
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                font-family: inherit;
+                padding: 4px;
+            }
+
+            .bb-year-dot {
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: #003d73;
+                border: 2px solid rgba(255, 255, 255, .3);
+                transition: .3s;
+            }
+
+            .bb-year-btn.bb-active .bb-year-dot {
+                background: #6fc3df;
+                border-color: #6fc3df;
+                box-shadow: 0 0 0 4px rgba(111, 195, 223, .25);
+            }
+
+            .bb-year-label {
+                font-size: 12.5px;
+                font-weight: 600;
+                color: #7c8ba1;
+                transition: .3s;
+            }
+
+            .bb-year-btn:hover .bb-year-label {
+                color: #fff;
+            }
+
+            .bb-year-btn.bb-active .bb-year-label {
+                color: #6fc3df;
+                font-weight: 700;
+            }
+
+            .bb-team-panel {
+                max-width: 760px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 2;
+            }
+
+            .bb-team-grid {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .bb-team-grid.bb-hidden {
+                display: none;
+            }
+
+            .bb-member {
+                width: 130px;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(12px);
+                animation: bbMemberIn .4s ease forwards;
+            }
+
+            @keyframes bbMemberIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .bb-member-photo-wrap {
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 12px;
+                position: relative;
+            }
+
+            .bb-member-photo {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2.5px solid rgba(111,195,223,.25);
+                transition: .35s;
+                box-shadow: 0 4px 18px rgba(0,0,0,.35);
+            }
+
+            .bb-member:hover .bb-member-photo {
+                border-color: #6fc3df;
+                transform: scale(1.07);
+                box-shadow: 0 8px 28px rgba(111,195,223,.35);
+            }
+
+            .bb-member h4 {
+                font-size: 14px;
+                font-weight: 700;
+                color: #fff;
+                margin-bottom: 3px;
+                line-height: 1.3;
+            }
+
+            .bb-member-role {
+                font-size: 11px;
+                letter-spacing: .5px;
+                text-transform: uppercase;
+                color: #6fc3df;
+                font-weight: 600;
+            }
+
+            @media(max-width:560px) {
+                .bb-team {
+                    padding: 50px 6%;
+                }
+
+                .bb-team-head h2 {
+                    font-size: 23px;
+                }
+
+                .bb-team-grid {
+                    flex-wrap: wrap;
+                    gap: 16px;
+                }
+
+                .bb-member {
+                    width: 80px;
+                }
+
+                .bb-member-photo-wrap {
+                    width: 64px;
+                    height: 64px;
+                }
+
+                .bb-member h4 {
+                    font-size: 12.5px;
+                }
+
+                .bb-member-role {
+                    font-size: 9.5px;
+                }
+            }
+        </style>
+
+        <section class="bb-team" aria-label="Bluebells website development team across the years">
+
+            <div class="bb-team-decor">
+                <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <!-- large glowing arc from bottom-left -->
+                    <circle cx="0" cy="400" r="280" fill="none" stroke="#6fc3df" stroke-opacity="0.10" stroke-width="1.5"/>
+                    <circle cx="0" cy="400" r="440" fill="none" stroke="#6fc3df" stroke-opacity="0.06" stroke-width="1"/>
+                    <!-- arc from top-right -->
+                    <circle cx="1200" cy="0" r="300" fill="none" stroke="#f0c560" stroke-opacity="0.09" stroke-width="1.5"/>
+                    <circle cx="1200" cy="0" r="460" fill="none" stroke="#6fc3df" stroke-opacity="0.06" stroke-width="1"/>
+                    <!-- gold diamond mid-left -->
+                    <polygon points="28,180 36,194 28,208 20,194" fill="#f0c560" fill-opacity="0.28"/>
+                    <!-- gold diamond mid-right -->
+                    <polygon points="1172,170 1180,184 1172,198 1164,184" fill="#f0c560" fill-opacity="0.24"/>
+                    <!-- top cross -->
+                    <line x1="160" y1="28" x2="160" y2="44" stroke="#6fc3df" stroke-opacity="0.22" stroke-width="1.5"/>
+                    <line x1="153" y1="36" x2="167" y2="36" stroke="#6fc3df" stroke-opacity="0.22" stroke-width="1.5"/>
+                    <line x1="1040" y1="340" x2="1040" y2="356" stroke="#6fc3df" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <line x1="1033" y1="348" x2="1047" y2="348" stroke="#6fc3df" stroke-opacity="0.18" stroke-width="1.5"/>
+                    <!-- scattered small dots -->
+                    <circle cx="300" cy="30" r="2" fill="#6fc3df" fill-opacity="0.20"/>
+                    <circle cx="600" cy="18" r="1.5" fill="#f0c560" fill-opacity="0.22"/>
+                    <circle cx="900" cy="35" r="2" fill="#6fc3df" fill-opacity="0.18"/>
+                    <circle cx="450" cy="370" r="2" fill="#f0c560" fill-opacity="0.20"/>
+                    <circle cx="750" cy="380" r="1.5" fill="#6fc3df" fill-opacity="0.16"/>
+                </svg>
+            </div>
+
+            <div class="bb-team-head">
+                <span class="bb-team-eyebrow">Built By Students</span>
+                <h2>The Minds Behind This Website</h2>
+                <p>Designed and built entirely by Bluebells students â€” pick a year to meet the team.</p>
+            </div>
+
+            <div class="bb-timeline-wrap">
+                <div class="bb-timeline" id="bb-timeline">
+                    <div class="bb-timeline-line"></div>
+                    <div class="bb-timeline-progress" id="bb-timeline-progress"></div>
+
+                    <button class="bb-year-btn" data-year="2022">
+                        <span class="bb-year-dot"></span>
+                        <span class="bb-year-label">2022</span>
+                    </button>
+                    <button class="bb-year-btn" data-year="2023">
+                        <span class="bb-year-dot"></span>
+                        <span class="bb-year-label">2023</span>
+                    </button>
+                    <button class="bb-year-btn" data-year="2024">
+                        <span class="bb-year-dot"></span>
+                        <span class="bb-year-label">2024</span>
+                    </button>
+                    <button class="bb-year-btn" data-year="2025">
+                        <span class="bb-year-dot"></span>
+                        <span class="bb-year-label">2025</span>
+                    </button>
+                    <button class="bb-year-btn bb-active" data-year="2026">
+                        <span class="bb-year-dot"></span>
+                        <span class="bb-year-label">2026</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bb-team-panel">
+
+                <div class="bb-team-grid bb-hidden" data-year="2022">
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Rohan Mehta</h4>
+                        <span class="bb-member-role">Developer</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Ishaan Kapoor</h4>
+                        <span class="bb-member-role">Design</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Myra Sen</h4>
+                        <span class="bb-member-role">Content</span>
+                    </div>
+                </div>
+
+                <div class="bb-team-grid bb-hidden" data-year="2023">
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Aarav Sharma</h4>
+                        <span class="bb-member-role">Lead Dev</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Diya Kapoor</h4>
+                        <span class="bb-member-role">Frontend</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Vivaan Rao</h4>
+                        <span class="bb-member-role">Design</span>
+                    </div>
+                </div>
+
+                <div class="bb-team-grid bb-hidden" data-year="2024">
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Kabir Singh</h4>
+                        <span class="bb-member-role">Lead Dev</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Anaya Verma</h4>
+                        <span class="bb-member-role">Frontend</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Reyansh Gupta</h4>
+                        <span class="bb-member-role">Backend</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Saanvi Joshi</h4>
+                        <span class="bb-member-role">Design</span>
+                    </div>
+                </div>
+
+                <div class="bb-team-grid bb-hidden" data-year="2025">
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Arjun Malhotra</h4>
+                        <span class="bb-member-role">Lead Dev</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Riya Choudhary</h4>
+                        <span class="bb-member-role">Frontend</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Aryan Bose</h4>
+                        <span class="bb-member-role">Backend</span>
+                    </div>
+                </div>
+
+                <div class="bb-team-grid" data-year="2026">
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Naina Iyer</h4>
+                        <span class="bb-member-role">Lead Dev</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Dev Khanna</h4>
+                        <span class="bb-member-role">Frontend</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Aarav Sharma</h4>
+                        <span class="bb-member-role">Design</span>
+                    </div>
+                    <div class="bb-member">
+                        <div class="bb-member-photo-wrap">
+                            <img class="bb-member-photo"
+                                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80"
+                                alt="Student developer">
+                        </div>
+                        <h4>Myra Sen</h4>
+                        <span class="bb-member-role">Content</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <script>
+            (function () {
+                const yearBtns = document.querySelectorAll('#bb-timeline .bb-year-btn');
+                const panels = document.querySelectorAll('.bb-team-grid');
+                const progress = document.getElementById('bb-timeline-progress');
+                const timeline = document.getElementById('bb-timeline');
+
+                function updateProgress(activeBtn) {
+                    const timelineRect = timeline.getBoundingClientRect();
+                    const dot = activeBtn.querySelector('.bb-year-dot');
+                    const dotRect = dot.getBoundingClientRect();
+                    const dotCenter = dotRect.left + dotRect.width / 2 - timelineRect.left;
+                    progress.style.width = Math.max(dotCenter - 18, 0) + 'px';
+                }
+
+                function setYear(year, btn) {
+                    yearBtns.forEach(b => b.classList.toggle('bb-active', b === btn));
+                    panels.forEach(p => {
+                        const match = p.getAttribute('data-year') === year;
+                        p.classList.toggle('bb-hidden', !match);
+                        if (match) {
+                            p.querySelectorAll('.bb-member').forEach((m, i) => {
+                                m.style.animation = 'none';
+                                void m.offsetWidth;
+                                m.style.animationDelay = (i * 0.06) + 's';
+                                m.style.animation = 'bbMemberIn .4s ease forwards';
+                            });
+                        }
+                    });
+                    updateProgress(btn);
+                }
+
+                yearBtns.forEach(btn => {
+                    btn.addEventListener('click', () => setYear(btn.getAttribute('data-year'), btn));
+                });
+
+                function init() {
+                    const activeBtn = document.querySelector('#bb-timeline .bb-year-btn.bb-active');
+                    if (activeBtn) updateProgress(activeBtn);
+                }
+
+                window.addEventListener('load', init);
+                setTimeout(init, 100);
+                window.addEventListener('resize', init);
+            })();
+        </script>
+    </section>
